@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="toton.lazycoder.com.helloworld">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false">
+    </uses-feature>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/title_activity_main"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Login.Log"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login.patient_log"
+            android:parentActivityName=".Login.Log"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="toton.lazycoder.com.helloworld.Login.Log" />
+        </activity>
+        <activity
+            android:name=".Login.Demographics"
+            android:parentActivityName=".Login.patient_log"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="toton.lazycoder.com.helloworld.Login.patient_log" />
+        </activity>
+        <activity
+            android:name=".ComplainModule"
+            android:parentActivityName=".Login.Demographics"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="toton.lazycoder.com.helloworld.Login.Demographics" />
+        </activity>
+        <activity
+            android:name=".ObservationAndExamination"
+            android:label="@string/title_activity_observation_and_examination">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="toton.lazycoder.com.helloworld.ComplainModule" />
+        </activity>
+        <activity
+            android:name=".PhysicalExamModule"
+            android:label="@string/title_activity_physical_exam_module">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="toton.lazycoder.com.helloworld.ObservationAndExamination" />
+        </activity>
+        <activity
+            android:name=".ShowComplaints"
+            android:label="@string/title_activity_show_complaints">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="toton.lazycoder.com.helloworld.PhysicalExamModule" />
+        </activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+
+            </meta-data>
+        </provider>
+    </application>
+
+</manifest>

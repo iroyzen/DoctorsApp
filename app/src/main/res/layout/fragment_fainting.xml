@@ -1,0 +1,323 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.Diagnosis.Fainting"
+    android:background="#ffffff">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView16"
+        android:layout_gravity="left|top" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="No. of episodes:"
+                    android:textColor="#212525"
+                    android:id="@+id/faintingEpisodes"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+                <EditText
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText_faintingEpisodes"
+                    android:layout_column="2"
+                    android:background="@drawable/background"
+                    android:layout_height="35dp"
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Interval between episodes:"
+                    android:textColor="#212525"
+                    android:id="@+id/faintingInterval"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+                <EditText
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText_faintingInterval"
+                    android:layout_column="2"
+                    android:background="@drawable/background"
+                    android:layout_height="35dp"
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Is conscious lost?"
+                    android:textColor="#212525"
+                    android:id="@+id/faintingUnconscious"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes   "
+                            android:id="@+id/checkBox_faintingUnconsciousYes"
+                            android:button="@drawable/abc_btn_check_material"
+                            android:buttonTint="#000000"
+                            android:textColor="#020202"
+                            android:theme="@style/MyCheckBox" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="For how long ?"
+                            android:textColor="#212525"
+                            android:layout_marginLeft="20dp" />
+
+                        <EditText
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/editText_faintingUnconsciousDuration"
+                            android:layout_column="4"
+                            android:background="@drawable/background"
+                            android:layout_height="35dp"
+                            android:layout_width="100dp"
+                            android:textColor="#000000"
+                            android:layout_marginBottom="10dp" />
+
+                    </TableRow>
+                </TableLayout>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No   "
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/checkBox_faintingUnconsciousNo"
+                    android:button="@drawable/abc_btn_check_material"
+                    android:buttonTint="#000000"
+                    android:textColor="#020202"
+                    android:theme="@style/MyCheckBox" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Any associated fits?"
+                    android:textColor="#212525"
+                    android:id="@+id/feverSymptom"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes   "
+                            android:id="@+id/checkBox_faintingFitsYes"
+                            android:button="@drawable/abc_btn_check_material"
+                            android:buttonTint="#000000"
+                            android:textColor="#020202"
+                            android:theme="@style/MyCheckBox" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Was it witnessed ?"
+                            android:textColor="#212525"
+                            android:layout_marginLeft="20dp" />
+
+                        <EditText
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/editText_faintingFits"
+                            android:layout_column="4"
+                            android:background="@drawable/background"
+                            android:layout_height="35dp"
+                            android:layout_width="100dp"
+                            android:textColor="#000000"
+                            android:layout_marginBottom="10dp" />
+
+                    </TableRow>
+                </TableLayout>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No   "
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/checkBox_faintingFitsNo"
+                    android:button="@drawable/abc_btn_check_material"
+                    android:buttonTint="#000000"
+                    android:textColor="#020202"
+                    android:theme="@style/MyCheckBox" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Fall ?"
+                    android:id="@+id/faintingFall"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_faintingFall"
+                    android:layout_marginLeft="30dp"
+                    android:backgroundTint="#488f05"
+                    android:background="@drawable/spinner_background" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Dizziness ?"
+                    android:id="@+id/faintingDizziness"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_faintingDizziness"
+                    android:layout_marginLeft="30dp"
+                    android:backgroundTint="#488f05"
+                    android:background="@drawable/spinner_background" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="What brings it on?"
+                    android:textColor="#212525"
+                    android:id="@+id/faintingStart"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <EditText
+                    android:id="@+id/editText_faintingStart"
+                    android:background="@drawable/background"
+                    android:layout_height="35dp"
+                    android:layout_width="500dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="What relieves it?"
+                    android:textColor="#212525"
+                    android:id="@+id/faintingRelief"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <EditText
+                    android:id="@+id/editText_faintingRelief"
+                    android:background="@drawable/background"
+                    android:layout_height="35dp"
+                    android:layout_width="500dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="200dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/backButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/back_button"
+            />
+
+        <Button
+            android:id="@+id/continueButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/continue_button"/>
+    </LinearLayout>
+</FrameLayout>

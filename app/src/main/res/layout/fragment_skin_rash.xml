@@ -1,0 +1,279 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.Diagnosis.SkinRash"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView12"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Where ?"
+                        android:textColor="#212525"
+                        android:id="@+id/skinRashPos"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:text="Particular place : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/radioButton1_skinRashPosPart"
+                            android:checked="false"
+                            android:textColor="#010101"
+                            android:button="@drawable/abc_btn_radio_material"
+                            android:clickable="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight="1"
+                            android:buttonTint="#000000"
+                            android:theme="@style/MyCheckBox" />
+
+
+                        <EditText
+                            android:layout_width="300dp"
+                            android:layout_height="35dp"
+                            android:id="@+id/editText_skinRashPos"
+                            android:layout_column="16"
+                            android:background="@drawable/background_new"
+                            android:layout_marginLeft="30dp"
+                            android:textColor="#000000" />
+
+                        <RadioButton
+                            android:layout_width="148dp"
+                            android:layout_height="wrap_content"
+                            android:text="Whole Body"
+                            android:id="@+id/radioButton2_skinRashPosWhole"
+                            android:textColor="#060505"
+                            android:backgroundTint="#f6000000"
+                            android:layout_marginLeft="30dp"
+                            android:checked="false"
+                            android:button="@drawable/abc_btn_radio_material"
+                            android:clickable="true"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="#000000"
+                            android:theme="@style/MyCheckBox" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="Size: "
+                        android:id="@+id/textView_skinRashSize"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editText_skinRashSize1"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:background="@drawable/background_new"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="cm  X"
+                        android:id="@+id/textView_skinRash1"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="6dp" />
+
+                    <EditText
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editText_skinRashSize2"
+                        android:layout_row="0"
+                        android:layout_column="3"
+                        android:background="@drawable/background_new"
+                        android:layout_marginLeft="6dp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="cm"
+                        android:id="@+id/textView_skinRash2"
+                        android:layout_row="0"
+                        android:layout_column="4"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="6dp" />
+
+                </GridLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="How many ?"
+                        android:textColor="#212525"
+                        android:id="@+id/skinRashCount"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="20dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/radioButton_skinRashSingle"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:textColor="#060505"
+                            android:text="Single"
+                            android:button="@drawable/abc_btn_radio_material"
+                            android:clickable="true"
+                            android:buttonTint="#000000"
+                            android:theme="@style/MyCheckBox" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton_skinRashMultiple" android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Multiple"
+                            android:textColor="#010101"
+                            android:button="@drawable/abc_btn_radio_material"
+                            android:clickable="true"
+                            android:buttonTint="#000000"
+                            android:theme="@style/MyCheckBox" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/editText_skinRashMultiple"
+                            android:background="@drawable/background_new"
+                            android:layout_weight="1"
+                            android:textColor="#000000" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Surface?"
+                        android:textColor="#212525"
+                        android:id="@+id/skinRashSurface"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_skinRashSurface"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        android:clickable="false"
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Colour?"
+                        android:textColor="#212525"
+                        android:id="@+id/skinRashColour"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/editText_skinRashColour"
+                        android:layout_column="16"
+                        android:background="@drawable/background_new"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="200dp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+                
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/backButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/back_button"
+            />
+
+        <Button
+            android:id="@+id/continueButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/continue_button"/>
+    </LinearLayout>
+</FrameLayout>

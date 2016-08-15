@@ -1,0 +1,1078 @@
+<resources>
+    <string name="sans_serif">sans-serif</string>
+    <string name="title_activity_main">Diagnosis</string>
+    <string name="any_associated_symptom">Any associated symptom ?</string>
+    <string name="continue_button">Continue</string>
+    <string name="back_button">Back</string>
+    <string name="duration">Duration</string>
+    <string name="where_did_it_start">Where did it start ?</string>
+    <string name="where_is_it_now">Where is it now ?</string>
+    <string name="how_did_it_start">How did it start ?</string>
+    <string name="intensity">Intensity</string>
+    <string name="nature">Nature</string>
+    <string name="what_brings_it_on">What brings it on ?</string>
+    <string name="relieved_by">Relieved by</string>
+    <string name="diarrhoea">Diarrhoea</string>
+    <string name="constipation">Constipation</string>
+    <string name="change_in_bowel_habit">Change in bowel habit</string>
+    <string name="pain_during_passing_stool">Pain during passing stool</string>
+    <string name="amount">Amount</string>
+    <string name="colour">Colour</string>
+    <string name="progress">Progress</string>
+    <string name="h_o_injury">H/O Injury</string>
+    <string name="where">Where</string>
+    <string name="is_there_constipation">Is there Constipation ?</string>
+    <string name="is_there_a_cough">Is there a Cough ?</string>
+    <string name="is_there_chest_pain">Is there Chest Pain ?</string>
+    <string name="is_there_abdominal_pain">Is there Abdominal Pain ?</string>
+    <string name="weight">Weight</string>
+    <string name="appetite">Appetite</string>
+    <string name="difficulty_in_breathing">Difficulty in Breathing</string>
+    <string name="is_there_itchy_throat">Is there itchy throat ?</string>
+    <string name="is_there_running_nose">Is there running nose ?</string>
+    <string name="is_there_expectoration">Is there expectoration ?</string>
+    <string name="is_there_a_fever">Is there a fever ?</string>
+    <string name="didnt_move">Didn\'t Move</string>
+    <string name="others">Others</string>
+    <string name="started_at">Started at</string>
+    <string name="now_at">Now at</string>
+    <string name="how_started">How Started</string>
+    <string name="brought_on_by">Brought On By</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="none">None</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+    <string name="discharge_from_ear">Discharge from Ear</string>
+    <string name="bleeding_from_ear">Bleeding from Ear</string>
+    <string name="diminished_hearing">Diminished Hearing</string>
+    <string name="cough">Cough</string>
+    <string name="fever">Fever</string>
+    <string name="change_of_voice">Change of Voice</string>
+    <string name="difficulty_in_swallowing">Difficulty in Swallowing</string>
+    <string name="around_the_anal_region">Around the Anal Region</string>
+    <string name="anal_region">Anal Region</string>
+    <string name="lots_of_bleeding">Lots of bleeding</string>
+    <string name="drops_of_blood">Drops of blood</string>
+    <string name="bright_red">Bright Red</string>
+    <string name="dark_red">Dark Red</string>
+    <string name="bad_smell">Bad Smell</string>
+    <string name="swelling_in_gums">Swelling in Gums</string>
+    <string name="bleeding_from_gums">Bleeding from Gums</string>
+    <string name="swelling">Swelling</string>
+    <string name="inability_to_move">Inability to move</string>
+    <string name="inactivity">Inactivity</string>
+    <string name="activity">Activity</string>
+    <string name="sudden">Sudden</string>
+    <string name="gradual">Gradual</string>
+    <string name="mild">Mild</string>
+    <string name="moderate">Moderate</string>
+    <string name="severe">Severe</string>
+    <string name="varies">Varies</string>
+    <string name="continuous">Continuous</string>
+    <string name="comes_and_goes">Comes and Goes</string>
+    <string name="always_there_but_sometimes_worse">Always there but sometimes worse</string>
+    <string name="dull">Dull</string>
+    <string name="sharp">Sharp</string>
+    <string name="constant_sense_of_pressure">Constant sense of Pressure</string>
+    <string name="vomiting">Vomiting</string>
+    <string name="food">Food</string>
+    <string name="rest">Rest</string>
+    <string name="period">Period</string>
+    <string name="injury">Injury</string>
+    <string name="exertion">Exertion</string>
+    <string name="vertigo">Vertigo</string>
+    <string name="empty_stomach">Empty Stomach</string>
+    <string name="acidity">Acidity</string>
+    <string name="nausea">Nausea</string>
+    <string name="loss_of_appetite">Loss of Appetite</string>
+    <string name="walking">Walking</string>
+    <string name="weakness_of_legs">Weakness of Legs</string>
+    <string name="difficult_to_control">Difficult to Control</string>
+    <string name="discharge_from_nipple">Discharge from Nipple</string>
+    <string name="bleeding_from_nipple">Bleeding from Nipple</string>
+    <string name="unconsciousness">Unconsciousness</string>
+    <string name="extreme_anxiety">Extreme Anxiety</string>
+    <string name="sweating">Sweating</string>
+    <string name="bright_light">Bright Light</string>
+    <string name="loud_noise">Loud Noise</string>
+    <string name="back_of_mouth">Back of Mouth</string>
+    <string name="front_of_throat">Front of Throat</string>
+    <string name="both">Both</string>
+    <string name="spread_to_groin">Spread to Groin</string>
+    <string name="discharge">Discharge</string>
+    <string name="bleeding">Bleeding</string>
+    <string name="passage_of_stool">Passage of Stool</string>
+    <string name="pain_or_difficulty_in_urinating">Pain or Difficulty in Urinating</string>
+    <string name="improving">Improving</string>
+    <string name="same_as_before">Same as before</string>
+    <string name="worsening">Worsening</string>
+    <string name="chest_pain">Chest Pain</string>
+    <string name="abdominal_pain">Abdominal Pain</string>
+    <string name="increased">Increased</string>
+    <string name="decreased">Decreased</string>
+    <string name="normal">Normal</string>
+    <string name="no_change">No Change</string>
+    <string name="expectoration">Expectoration</string>
+    <string name="itchy_throat">Itchy Throat</string>
+    <string name="running_nose">Running Nose</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+
+    <string-array name="select_or_describe_limbs">
+        <item>Limb 1</item>
+        <item>Limb 2</item>
+        <item>Limb 3</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="right_left_array">
+        <item>@string/right</item>
+        <item>@string/left</item>
+    </string-array>
+    <string-array name="yes_no_array">
+        <item>@string/yes</item>
+        <item>@string/no</item>
+    </string-array>
+    <string-array name="none_others_array">
+        <item>@string/none</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="didnt_move_others_array">
+        <item>@string/didnt_move</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="pain_how_started">
+        <item>@string/sudden</item>
+        <item>@string/gradual</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="pain_intensity">
+        <item>@string/mild</item>
+        <item>@string/moderate</item>
+        <item>@string/severe</item>
+        <item>@string/varies</item>
+    </string-array>
+    <string-array name="pain_nature">
+        <item>@string/continuous</item>
+        <item>@string/comes_and_goes</item>
+        <item>@string/always_there_but_sometimes_worse</item>
+    </string-array>
+
+    <string-array name="chest_pain_nature">
+        <item>@string/dull</item>
+        <item>@string/sharp</item>
+        <item>@string/constant_sense_of_pressure</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="abdominal_pain_started_at">
+        <item>Upper(R)</item>
+        <item>Upper(C)</item>
+        <item>Upper(L)</item>
+        <item>Middle(R)</item>
+        <item>Middle(C)</item>
+        <item>Middle(L)</item>
+        <item>Lower(R)</item>
+        <item>Lower(C)</item>
+        <item>Lower(L)</item>
+        <item>All Over</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="abdominal_pain_now_at">
+        <item>@string/didnt_move</item>
+        <item>Upper(R)</item>
+        <item>Upper(C)</item>
+        <item>Upper(L)</item>
+        <item>Middle(R)</item>
+        <item>Middle(C)</item>
+        <item>Middle(L)</item>
+        <item>Lower(R)</item>
+        <item>Lower(C)</item>
+        <item>Lower(L)</item>
+        <item>All Over</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="abdominal_pain_brought_on_by">
+        <item>@string/none</item>
+        <item>@string/food</item>
+        <item>@string/empty_stomach</item>
+        <item>@string/period</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="abdominal_pain_relieved_by">
+        <item>@string/none</item>
+        <item>@string/food</item>
+        <item>@string/vomiting</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="abdominal_pain_symptoms">
+        <item>@string/none</item>
+        <item>@string/constipation</item>
+        <item>@string/diarrhoea</item>
+        <item>@string/vomiting</item>
+        <item>@string/loss_of_appetite</item>
+        <item>@string/nausea</item>
+        <item>@string/acidity</item>
+        <item>@string/fever</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="back_pain_started_at">
+        <item>Upper(L)</item>
+        <item>Upper(R)</item>
+        <item>Upper(C)</item>
+        <item>Lower(L)</item>
+        <item>Lower(R)</item>
+        <item>Lower(C)</item>
+        <item>All Over</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="back_pain_now_at">
+        <item>@string/didnt_move</item>
+        <item>Front(R)</item>
+        <item>Front(L)</item>
+        <item>Front of Leg(R)</item>
+        <item>Back of Leg(R)</item>
+        <item>Front of Leg(L)</item>
+        <item>Back of Leg(L)</item>
+        <item>@string/others</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="back_pain_brought_on_by">
+        <item>@string/none</item>
+        <item>@string/walking</item>
+        <item>@string/exertion</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="back_pain_relieved_by">
+        <item>@string/none</item>
+        <item>@string/rest</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="back_pain_symptoms">
+        <item>@string/none</item>
+        <item>@string/h_o_injury</item>
+        <item>@string/weakness_of_legs</item>
+        <item>@string/difficult_to_control</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="breast_pain_started_at">
+        <item>RUO(R)</item>
+        <item>RLO(R)</item>
+        <item>LUO(R)</item>
+        <item>LLO(R)</item>
+        <item>C(R)</item>
+        <item>RUO(L)</item>
+        <item>RLO(L)</item>
+        <item>LUO(L)</item>
+        <item>LLO(L)</item>
+        <item>C(L)</item>
+        <item>All Over</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="breast_pain_now_at">
+        <item>@string/didnt_move</item>
+        <item>RUO(R)</item>
+        <item>RLO(R)</item>
+        <item>LUO(R)</item>
+        <item>LLO(R)</item>
+        <item>C(R)</item>
+        <item>RUO(L)</item>
+        <item>RLO(L)</item>
+        <item>LUO(L)</item>
+        <item>LLO(L)</item>
+        <item>C(L)</item>
+        <item>All Over</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="breast_pain_brought_on_by">
+        <item>@string/none</item>
+        <item>@string/period</item>
+        <item>@string/activity</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="breast_pain_relieved_by">
+        <item>@string/none</item>
+        <item>@string/period</item>
+        <item>@string/rest</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="breast_pain_symptoms">
+        <item>@string/none</item>
+        <item>@string/discharge_from_nipple</item>
+        <item>@string/bleeding_from_nipple</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="chest_pain_now_at">
+        <item>Didn\'t move</item>
+        <item>Upper(L)</item>
+        <item>Upper(R)</item>
+        <item>Upper(C)</item>
+        <item>Lower(L)</item>
+        <item>Lower(R)</item>
+        <item>Lower(C)</item>
+        <item>Neck</item>
+        <item>Jaw</item>
+        <item>All Over</item>
+        <item>Others</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="chest_pain_brought_on_by">
+        <item>@string/none</item>
+        <item>@string/exertion</item>
+        <item>@string/cough</item>
+        <item>@string/injury</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="chest_pain_symptoms">
+        <item>@string/none</item>
+        <item>@string/sweating</item>
+        <item>@string/extreme_anxiety</item>
+        <item>@string/unconsciousness</item>
+        <item>@string/difficulty_in_breathing</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="ear_pain_symptoms">
+        <item>@string/none</item>
+        <item>@string/h_o_injury</item>
+        <item>@string/discharge_from_ear</item>
+        <item>@string/bleeding_from_ear</item>
+        <item>@string/diminished_hearing</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="headache_places">
+        <item>Front(R)</item>
+        <item>Front(L)</item>
+        <item>Back(R)</item>
+        <item>Back(L)</item>
+        <item>Middle(C)</item>
+        <item>All Over</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="headache_brought_on_by">
+        <item>@string/injury</item>
+        <item>@string/bright_light</item>
+        <item>@string/loud_noise</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="headache_symptoms">
+        <item>@string/none</item>
+        <item>@string/vomiting</item>
+        <item>@string/vertigo</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="joint_pain_started_at">
+        <item>Neck</item>
+        <item>Shoulder(R)</item>
+        <item>Shoulder(L)</item>
+        <item>Shoulder(B)</item>
+        <item>Elbow(R)</item>
+        <item>Elbow(L)</item>
+        <item>Elbow(B)</item>
+        <item>Wrist(R)</item>
+        <item>Wrist(L)</item>
+        <item>Wrist(B)</item>
+        <item>All Fingers(R)</item>
+        <item>Thumb(R)</item>
+        <item>Index Finger(R)</item>
+        <item>Middle Finger(R)</item>
+        <item>Ring Finger(R)</item>
+        <item>Little Finger(R)</item>
+        <item>All Fingers(L)</item>
+        <item>Thumb(L)</item>
+        <item>Index Finger(L)</item>
+        <item>Middle Finger(L)</item>
+        <item>Ring Finger(L)</item>
+        <item>Little Finger(L)</item>
+        <item>All Fingers(B)</item>
+        <item>Thumb(B)</item>
+        <item>Index Finger(B)</item>
+        <item>Middle Finger(B)</item>
+        <item>Ring Finger(B)</item>
+        <item>Little Finger(B)</item>
+        <item>Hip(R)</item>
+        <item>Hip(L)</item>
+        <item>Hip(B)</item>
+        <item>Knee(R)</item>
+        <item>Knee(L)</item>
+        <item>Knee(B)</item>
+        <item>Ankle(R)</item>
+        <item>Ankle(L)</item>
+        <item>Ankle(B)</item>
+        <item>All Toes(R)</item>
+        <item>Great Toe(R)</item>
+        <item>Other Toes(R)</item>
+        <item>All Toes(L)</item>
+        <item>Great Toe(L)</item>
+        <item>Other Toes(L)</item>
+        <item>Others</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="joint_pain_now_at">
+        <item>Same Places</item>
+        <item>Neck</item>
+        <item>Shoulder(R)</item>
+        <item>Shoulder(L)</item>
+        <item>Shoulder(B)</item>
+        <item>Elbow(R)</item>
+        <item>Elbow(L)</item>
+        <item>Elbow(B)</item>
+        <item>Wrist(R)</item>
+        <item>Wrist(L)</item>
+        <item>Wrist(B)</item>
+        <item>All Fingers(R)</item>
+        <item>Thumb(R)</item>
+        <item>Index Finger(R)</item>
+        <item>Middle Finger(R)</item>
+        <item>Ring Finger(R)</item>
+        <item>Little Finger(R)</item>
+        <item>All Fingers(L)</item>
+        <item>Thumb(L)</item>
+        <item>Index Finger(L)</item>
+        <item>Middle Finger(L)</item>
+        <item>Ring Finger(L)</item>
+        <item>Little Finger(L)</item>
+        <item>All Fingers(B)</item>
+        <item>Thumb(B)</item>
+        <item>Index Finger(B)</item>
+        <item>Middle Finger(B)</item>
+        <item>Ring Finger(B)</item>
+        <item>Little Finger(B)</item>
+        <item>Hip(R)</item>
+        <item>Hip(L)</item>
+        <item>Hip(B)</item>
+        <item>Knee(R)</item>
+        <item>Knee(L)</item>
+        <item>Knee(B)</item>
+        <item>Ankle(R)</item>
+        <item>Ankle(L)</item>
+        <item>Ankle(B)</item>
+        <item>All Toes(R)</item>
+        <item>Great Toe(R)</item>
+        <item>Other Toes(R)</item>
+        <item>All Toes(L)</item>
+        <item>Great Toe(L)</item>
+        <item>Other Toes(L)</item>
+        <item>Others</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="joint_pain_brought_on_relieved_by">
+        <item>@string/none</item>
+        <item>@string/activity</item>
+        <item>@string/inactivity</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="joint_pain_symptoms">
+        <item>@string/none</item>
+        <item>@string/h_o_injury</item>
+        <item>@string/swelling</item>
+        <item>@string/inability_to_move</item>
+        <item>@string/fever</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="throat_pain_symptoms">
+        <item>@string/none</item>
+        <item>@string/cough</item>
+        <item>@string/fever</item>
+        <item>@string/change_of_voice</item>
+        <item>@string/difficulty_in_swallowing</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="throat_pain_places">
+        <item>@string/back_of_mouth</item>
+        <item>@string/front_of_throat</item>
+    </string-array>
+
+    <string-array name="teeth_pain_started_at">
+        <item>Upper Right</item>
+        <item>Upper Left</item>
+        <item>Lower Right</item>
+        <item>Lower Left</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="teeth_pain_now_at">
+        <item>@string/didnt_move</item>
+        <item>Upper Right</item>
+        <item>Upper Left</item>
+        <item>Lower Right</item>
+        <item>Lower Left</item>
+    </string-array> <!-- Raw Strings -->
+    <string-array name="teeth_pain_symptoms">
+        <item>@string/none</item>
+        <item>@string/h_o_injury</item>
+        <item>@string/bad_smell</item>
+        <item>@string/swelling_in_gums</item>
+        <item>@string/bleeding_from_gums</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="perianal_pain_started_at">
+        <item>@string/anal_region</item>
+        <item>@string/around_the_anal_region</item>
+    </string-array>
+    <string-array name="perianal_pain_now_at">
+        <item>@string/didnt_move</item>
+        <item>@string/anal_region</item>
+        <item>@string/around_the_anal_region</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="perianal_pain_brought_on_by">
+        <item>@string/none</item>
+        <item>@string/passage_of_stool</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="perianal_pain_symptoms">
+        <item>@string/none</item>
+        <item>@string/fever</item>
+        <item>@string/discharge</item>
+        <item>@string/bleeding</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="bleeding_stool_amount">
+        <item>@string/lots_of_bleeding</item>
+        <item>@string/drops_of_blood</item>
+    </string-array>
+    <string-array name="bleeding_stool_color">
+        <item>@string/bright_red</item>
+        <item>@string/dark_red</item>
+    </string-array>
+
+    <string-array name="scrotal_pain_started_at">
+        <item>@string/left</item>
+        <item>@string/right</item>
+        <item>@string/both</item>
+    </string-array>
+    <string-array name="scrotal_pain_now_at">
+        <item>@string/didnt_move</item>
+        <item>@string/spread_to_groin</item>
+    </string-array>
+    <string-array name="scrotal_pain_brought_on_by">
+        <item>@string/none</item>
+        <item>@string/injury</item>
+        <item>@string/others</item>
+    </string-array>
+    <string-array name="scrotal_pain_symptoms">
+        <item>@string/none</item>
+        <item>@string/swelling</item>
+        <item>@string/pain_or_difficulty_in_urinating</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="particular_weakness_progress">
+        <item>@string/improving</item>
+        <item>@string/same_as_before</item>
+        <item>@string/worsening</item>
+    </string-array>
+    <string-array name="weakness_appetite">
+        <item>@string/normal</item>
+        <item>@string/decreased</item>
+        <item>@string/increased</item>
+    </string-array>
+    <string-array name="weakness_weight">
+        <item>@string/no_change</item>
+        <item>@string/decreased</item>
+        <item>@string/increased</item>
+    </string-array>
+
+    <string-array name="main_category">
+        <item>Pain</item>
+        <item>Swelling</item>
+        <item>Difficulty in Breathing</item>
+        <item>Fever</item>
+        <item>Diarrhoea</item>
+        <item>Vomiting</item>
+        <item>Dizziness</item>
+        <item>Acidity/Indigestion</item>
+        <item>Yellow Urine</item>
+        <item>Skin Rash</item>
+        <item>Bleeding with Stool</item>
+        <item>Gynae Problems</item>
+        <item>Injury</item>
+        <item>Boils</item>
+        <item>Ulcer</item>
+        <item>Palpitation</item>
+        <item>Fainting</item>
+        <item>Weakness</item>
+        <item>Cough</item>
+        <item>Common Cold</item>
+    </string-array>
+
+    <string-array name="pain_subcategory">
+        <item>Headache</item>
+        <item>Ear Pain</item>
+        <item>Teeth Pain</item>
+        <item>Throat Pain</item>
+        <item>Back Pain</item>
+        <item>Joint Pain</item>
+        <item>Chest Pain</item>
+        <item>Abdominal Pain</item>
+        <item>Breast Pain</item>
+        <item>Scrotal Pain</item>
+        <item>Perianal Pain</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="swelling_subcategory">
+        <item>Throat Swelling</item>
+        <item>Abdomen Swelling</item>
+        <item>Others Swelling</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="difficulty_in_breathing_subcategory">
+        <item>Difficulty in Breathing</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="fever_subcategory">
+        <item>Fever</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="diarrhoea_subcategory">
+        <item>Diarrhoea</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="vomiting_subcategory">
+        <item>Vomiting</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="dizziness_subcategory">
+        <item>Dizziness</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="acidity_indigestion_subcategory">
+        <item>Acidity/Indigestion</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="yellow_urine_subcategory">
+        <item>Yellow Urine</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="skin_rash_subcategory">
+        <item>Skin Rash</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="bleeding_wth_stool_subcategory">
+        <item>Bleeding with Stool</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="gynae_problems_subcategory">
+        <item>Period Problem</item>
+        <item>Ante-natal</item>
+        <item>Infertility</item>
+        <item>Private Parts Problem</item>
+        <item>Intercourse Problem</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="injury_subcategory">
+        <item>Injury</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="boils__subcategory">
+        <item>Boils</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="ulcer_subcategory">
+        <item>Ulcer</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="palpitation_subcategory">
+        <item>Palpitation</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="fainting_subcategory">
+        <item>Fainting</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="weakness_subcategory">
+        <item>General Weakness</item>
+        <item>Particular Weakness</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="cough_subcategory">
+        <item>Cough</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string-array name="common_cold_subcategory">
+        <item>Common Cold</item>
+        <item>Select a Subcategory</item>
+    </string-array>
+
+    <string name="multiselectspinner">MultiSelectSpinner</string>
+    <string name="pain">Pain</string>
+    <string name="dizzyness">Dizzyness</string>
+
+
+    <string-array name="throatSwellPos">
+        <item>Back of the Mouth</item>
+        <item>Front of the Mouth</item>
+    </string-array>
+
+    <string-array name="throatSwellStart">
+        <item>Gradually</item>
+        <item>Suddenly</item>
+    </string-array>
+
+    <string-array name="YesNoString">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="throatSwellSize">
+        <item>No change</item>
+        <item>Increase</item>
+        <item>Decrease</item>
+    </string-array>
+
+    <string-array name="throatSwellSkin">
+        <item>No change</item>
+        <item>Change</item>
+    </string-array>
+
+    <string-array name="abdomenSwellPos">
+        <item>Upper(R)</item>
+        <item>Upper(C)</item>
+        <item>Upper(L)</item>
+        <item>Middle(R)</item>
+        <item>Middle(C)</item>
+        <item>Middle(L)</item>
+        <item>Lower(R)</item>
+        <item>Lower(C)</item>
+        <item>Lower(L)</item>
+    </string-array>
+
+    <string-array name="abdomenSwellStart">
+        <item>Gradually</item>
+        <item>Suddenly</item>
+    </string-array>
+
+    <string-array name="abdomenSwellSize">
+        <item>No change</item>
+        <item>Increase</item>
+        <item>Decrease</item>
+    </string-array>
+
+    <string-array name="abdomenSwellSkin">
+        <item>No change</item>
+        <item>Reddish</item>
+        <item>Blackish</item>
+        <item>Bluish</item>
+        <item>Other Change</item>
+    </string-array>
+
+    <string-array name="abdomenSwellBowel">
+        <item>No change</item>
+        <item>Constipation</item>
+        <item>Diarrhoea</item>
+    </string-array>
+
+    <string-array name="abdomenSwellCoughSize">
+        <item>Increase with coughing/straining</item>
+        <item>Reduces with lying down</item>
+        <item>Does not change</item>
+    </string-array>
+
+    <string-array name="abdomenSwellAppetite">
+        <item>No change</item>
+        <item>Increase</item>
+        <item>Decrease</item>
+    </string-array>
+
+    <string-array name="otherSwellStart">
+        <item>Gradually</item>
+        <item>Suddenly</item>
+    </string-array>
+
+    <string-array name="otherSwellSize">
+        <item>No change</item>
+        <item>Increase</item>
+        <item>Decrease</item>
+    </string-array>
+
+    <string-array name="otherSwellSkinColour">
+        <item>No change</item>
+        <item>Change</item>
+    </string-array>
+
+    <string-array name="difficultyBreathingProgress">
+        <item>Same as before</item>
+        <item>Worsening</item>
+        <item>Improving</item>
+        <item>Varies with season</item>
+    </string-array>
+
+    <string-array name="diarrhoeaNature">
+        <item>Everyday</item>
+        <item>Some Days</item>
+    </string-array>
+
+    <string-array name="vomitingNature">
+        <item>Everyday</item>
+        <item>Some Days</item>
+    </string-array>
+
+    <string-array name="vomitingAppetite">
+        <item>Everyday</item>
+        <item>Some Days</item>
+    </string-array>
+
+    <string-array name="dizzinessNature">
+        <item>Everyday</item>
+        <item>Some Days</item>
+    </string-array>
+
+    <string-array name="dizzinessVision">
+        <item>All right</item>
+        <item>Diminished</item>
+    </string-array>
+
+    <string-array name="dizzinessHearing">
+        <item>Normal</item>
+        <item>Less</item>
+    </string-array>
+
+    <string-array name="acidityIndigestionAppetite">
+        <item>Normal</item>
+        <item>Less</item>
+    </string-array>
+
+    <string-array name="acidityIndigestionWeight">
+        <item>Increase</item>
+        <item>Decrease</item>
+        <item>Did not change</item>
+    </string-array>
+
+    <string-array name="skinRashSurface">
+        <item>Smooth</item>
+        <item>Rough</item>
+    </string-array>
+
+    <string-array name="bleedingWithStoolColour">
+        <item>Bright Red</item>
+        <item>Dark Red</item>
+    </string-array>
+
+    <string-array name="bleedingWithStoolAmount">
+        <item>Lot</item>
+        <item>Drops</item>
+    </string-array>
+
+    <string-array name="feverNature">
+        <item>Every Day</item>
+        <item>Alternate Days</item>
+        <item>Irregular</item>
+    </string-array>
+
+    <string-array name="feverHowMuch">
+        <item>High</item>
+        <item>Low</item>
+        <item>Combined High and Low</item>
+    </string-array>
+
+    <string-array name="palpitationType">
+        <item>Intermittent</item>
+        <item>Always</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_observation_and_examination">ObservationAndExamination</string>
+
+    <string-array name="previousDocuments">
+        <item>Previous prescription</item>
+        <item>Previous XRay</item>
+        <item>Previous USG</item>
+        <item>Previous Lab Reports</item>
+        <item>Others</item>
+    </string-array>
+    <string name="title_activity_physical_exam_module">PhysicalExamModule</string>
+
+    <string-array name="YesNoExamString">
+        <item>Yes</item>
+        <item>No</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="PinchSkin">
+        <item>Normal</item>
+        <item>Slow</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="BreastColour">
+        <item>Normal</item>
+        <item>Discoloured</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="BreastNipple">
+        <item>Normal</item>
+        <item>Cracked</item>
+        <item>Inverted</item>
+        <item>NotDone</item>
+    </string-array>
+    <string-array name="OKString">
+        <item>OK</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="SkinRedSpots">
+        <item>Red spots seen</item>
+        <item>No Red spots</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="Pupil">
+        <item>Moving</item>
+        <item>Not Moving</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="SwollenFace">
+        <item>Normal</item>
+        <item>Swollen</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="NailAbnormal">
+        <item>Normal</item>
+        <item>Clubbing</item>
+        <item>Spoon Nails</item>
+        <item>Discoloured</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="NailCyanosis">
+        <item>Normal</item>
+        <item>swollen</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="HandPower">
+        <item>Grip equal both sides</item>
+        <item>Grip weak on left side</item>
+        <item>Grip weak on right side</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="LegMovement">
+        <item>SLR normal</item>
+        <item>Pain halfway on left side</item>
+        <item>Pain halfway on right side</item>
+        <item>Pain halfway on both sides</item>
+        <item>Pain at the beginning on left side</item>
+        <item>Pain at the beginning on right side</item>
+        <item>Pain at the beginning on both side</item>
+        <item>Pain near complete point on left side</item>
+        <item>Pain near complete point on right side</item>
+        <item>Pain near complete point on both side</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="LegStrength">
+        <item>Both legs equal</item>
+        <item>Right leg weak</item>
+        <item>Left leg weak</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="Teeth">
+        <item>Black Spots</item>
+        <item>Discoloured</item>
+        <item>Normal</item>
+        <item>NotDone</item>
+    </string-array>
+    <string-array name="ThroatRedness">
+        <item>Normal</item>
+        <item>Redness</item>
+        <item>Swelling</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="LumpShape">
+        <item>Round</item>
+        <item>Irregular</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="LumpSurface">
+        <item>Smooth</item>
+        <item>Irregular</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="LumpFeel">
+        <item>Hard</item>
+        <item>Soft</item>
+        <item>Medium</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="LumpSwell">
+        <item>Swelling above</item>
+        <item>Swelling below</item>
+        <item>No Swelling</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="LumpMove">
+        <item>Mobile</item>
+        <item>Fixed</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="LumpSize">
+        <item>Does not change</item>
+        <item>Increase with coughing</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="LumpLieSize">
+        <item>Does not change</item>
+        <item>Reduce with lying down</item>
+        <item>NotDone</item>
+    </string-array>
+
+    <string-array name="Position">
+        <item>Upper(R)</item>
+        <item>Upper(C)</item>
+        <item>Upper(L)</item>
+        <item>Middle(R)</item>
+        <item>Middle(C)</item>
+        <item>Middle(L)</item>
+        <item>Lower(R)</item>
+        <item>Lower(C)</item>
+        <item>Lower(L)</item>
+        <item>All Over</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="HeadInjury">
+        <item>No Injury</item>
+        <item>Injury at the side of the head</item>
+        <item>Injury at the middle of the head</item>
+        <item>Not done</item>
+    </string-array>
+
+    <string-array name="HeadSwelling">
+        <item>No Swelling</item>
+        <item>Swelling at the side of the head</item>
+        <item>Swelling at the middle of the head</item>
+        <item>Not done</item>
+    </string-array>
+    <string name="title_activity_show_complaints">ShowComplaints</string>
+
+</resources>

@@ -1,0 +1,182 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.PhysicalExam.ChestExam"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView18"
+        android:layout_gravity="center" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="vertical"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=" Heart Sounds : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Please take patient heart sounds:"
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"/>
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_HeartSound"
+                    android:layout_marginLeft="30dp"
+                    android:backgroundTint="#488f05"
+                    android:background="@drawable/spinner_background" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=" Breath sounds : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Please take patient breath sounds :"
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_BreathSound"
+                    android:layout_marginLeft="30dp"
+                    android:backgroundTint="#488f05"
+                    android:background="@drawable/spinner_background" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=" ECG : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Please take patient's ECG : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_ECG"
+                    android:layout_marginLeft="30dp"
+                    android:backgroundTint="#488f05"
+                    android:background="@drawable/spinner_background" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=" Skin red spots : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Inspect the exposed skin and that of chest wall and look for red spots :"
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_SkinRedSpots"
+                    android:layout_marginLeft="30dp"
+                    android:backgroundTint="#488f05"
+                    android:background="@drawable/spinner_background" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp">
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="Save"
+                    android:id="@+id/Save_button"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="200dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

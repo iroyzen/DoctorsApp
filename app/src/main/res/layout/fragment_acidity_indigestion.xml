@@ -1,0 +1,398 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.Diagnosis.AcidityIndigestion"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView10" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Duration?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionDuration"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/editText_acidityIndigestionDuration"
+                                android:layout_column="2"
+                                android:background="@drawable/background"
+                                android:layout_height="35dp"
+                                android:layout_width="100dp"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="days"
+                                android:id="@+id/textView_diarrhoeaDuration"
+                                android:layout_column="4"
+                                android:textColor="#262525"
+                                android:layout_marginLeft="10dp" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Abdominal Pain?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionPain"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_acidityIndigestionPain"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Vomiting?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionVomiting"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_acidityIndigestionVomiting"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Nausea?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionNausea"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_acidityIndigestionNausea"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Appetite?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionAppetite"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_acidityIndigestionAppetite"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Constipation?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionConstipation"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_acidityIndigestionConstipation"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Diarrhoea?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionDiarrhoea"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_acidityIndigestionDiarrhoea"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="What makes it worse?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionWorsen"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <EditText
+                        android:id="@+id/editText_acidityIndigestionWorsen"
+                        android:layout_column="2"
+                        android:background="@drawable/background"
+                        android:layout_height="35dp"
+                        android:layout_width="500dp"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="What relieves it?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionRelief"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <EditText
+                        android:id="@+id/editText_acidityIndigestionRelief"
+                        android:layout_column="2"
+                        android:background="@drawable/background"
+                        android:layout_height="35dp"
+                        android:layout_width="500dp"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="H/O Jaundice?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionJaundice"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_acidityIndigestionJaundice"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="H/O Alcohol Ingestion?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionAlcohol"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_acidityIndigestionAlcohol"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="H/O Smoking?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionSmoke"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_acidityIndigestionSmoke"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Change in Weight?"
+                        android:textColor="#212525"
+                        android:id="@+id/acidityIndigestionWeight"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_acidityIndigestionWeight"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="200dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/backButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/back_button"
+            />
+
+        <Button
+            android:id="@+id/continueButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/continue_button"/>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,445 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.PhysicalExam.AbdomenExam"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView19"
+        android:layout_gravity="center" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=" Scars : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Are there visible scars?"
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_VisibleScars"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/spinner_background" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Where is it?"
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/spinner_normal_better"
+                        android:text=" [Select option(s)...]"
+                        android:textSize="18sp"
+                        android:id="@+id/multiSelect_ScarPosition"
+                        android:textColor="#ffffff" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=" Distention : "
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Is there abdominal bloating?"
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_Distention"
+                        android:layout_marginLeft="30dp"
+                        
+                        android:background="@drawable/spinner_background" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=" Tenderness : "
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Is there abdominal tenderness?"
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_AbdomenTenderness"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/spinner_background" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Where is it?"
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/spinner_normal_better"
+                        android:text=" [Select option(s)...]"
+                        android:textSize="18sp"
+                        android:id="@+id/multiSelect_TendernessPosition"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=" Lumps : "
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Are there lumps?"
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_abdomenLumps"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/spinner_background" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Where is it?"
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp" />
+                    <TextView
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/spinner_normal_better"
+                        android:text=" [Select option(s)...]"
+                        android:textSize="18sp"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/multiSelect_LumpPosition"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="How many?"
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/editText_LumpsCount"
+                                android:layout_column="2"
+                                android:background="@drawable/background"
+                                android:layout_height="35dp"
+                                android:layout_width="100dp"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="days"
+                                android:layout_column="4"
+                                android:textColor="#262525"
+                                android:layout_marginLeft="10dp" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="What is its shape?"
+                        android:id="@+id/spinner_LumpShape_test"
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_LumpShape"
+                        android:layout_marginLeft="30dp"
+                        
+                        android:background="@drawable/spinner_background" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Surface?"
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_LumpSurface"
+                    android:layout_marginLeft="30dp"
+                    
+                    android:background="@drawable/spinner_background" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="How does it feel?"
+                android:textColor="#212525"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:id="@+id/spinner_LumpFeel"
+                android:layout_marginLeft="30dp"
+                
+                android:background="@drawable/spinner_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Painful or not?"
+                android:textColor="#212525"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:id="@+id/spinner_LumpPain"
+                android:layout_marginLeft="30dp"
+                
+                android:background="@drawable/spinner_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Any change in colour of skin?"
+                android:textColor="#212525"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:id="@+id/spinner_LumpSkin"
+                android:layout_marginLeft="30dp"
+                
+                android:background="@drawable/spinner_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Any swelling above or below the tumour?"
+                android:textColor="#212525"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:id="@+id/spinner_LumpSwell"
+                android:layout_marginLeft="30dp"
+                
+                android:background="@drawable/spinner_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Is it moving related to adjacent tissues?"
+                android:textColor="#212525"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:id="@+id/spinner_LumpMove"
+                android:layout_marginLeft="30dp"
+                
+                android:background="@drawable/spinner_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Put a hand on the swelling and ask the patient to cough. Can you see and feel if there is a change in size??"
+                android:textColor="#212525"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:id="@+id/spinner_LumpSize"
+                android:layout_marginLeft="30dp"
+                
+                android:background="@drawable/spinner_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Now ask the patient to lie down. Is the swelling going down/reduces in size??"
+                android:textColor="#212525"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:id="@+id/spinner_LumpLieSize"
+                android:layout_marginLeft="30dp"
+                
+                android:background="@drawable/spinner_background" />
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp">
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="Save"
+                    android:id="@+id/Save_button"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="200dp"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

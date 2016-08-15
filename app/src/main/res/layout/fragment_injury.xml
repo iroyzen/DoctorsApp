@@ -1,0 +1,481 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.Diagnosis.Injury"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2"
+        android:layout_gravity="right|top" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Where is it?"
+                    android:textColor="#212525"
+                    android:id="@+id/injuryPos"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <EditText
+                    android:id="@+id/editText_injuryPos"
+                    android:background="@drawable/background"
+                    android:layout_height="35dp"
+                    android:layout_width="500dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="How sustained?"
+                    android:textColor="#212525"
+                    android:id="@+id/injuryHow"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fall(at home)"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/checkBox_injuryFallHome"
+                    android:button="@drawable/abc_btn_check_material"
+                    android:buttonTint="#000000"
+                    android:textColor="#020202"
+                    android:theme="@style/MyCheckBox" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fall(on road)"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/checkBox_injuryFallRoad"
+                    android:button="@drawable/abc_btn_check_material"
+                    android:buttonTint="#000000"
+                    android:textColor="#020202"
+                    android:theme="@style/MyCheckBox" />
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fall(from height)   "
+                            android:layout_column="1"
+                            android:id="@+id/checkBox_injuryFallHeight"
+                            android:button="@drawable/abc_btn_check_material"
+                            android:buttonTint="#000000"
+                            android:textColor="#020202"
+                            android:theme="@style/MyCheckBox" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="How high?  "
+                            android:layout_column="2"
+                            android:textColor="#212525"
+                            android:id="@+id/textView_injuryFallHeight"
+                            android:layout_marginLeft="30dp" />
+
+
+                        <EditText
+                            android:ems="10"
+                            android:id="@+id/editText_injuryFallHeight"
+                            android:layout_column="3"
+                            android:background="@drawable/background"
+                            android:layout_height="30dp"
+                            android:layout_width="200dp"
+                            android:textColor="#000000"
+                            android:layout_marginBottom="10dp" />
+
+                    </TableRow>
+                </TableLayout>
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hit by (car)"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/checkBox_injuryHitCar"
+                    android:button="@drawable/abc_btn_check_material"
+                    android:buttonTint="#000000"
+                    android:textColor="#020202"
+                    android:theme="@style/MyCheckBox" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hit by (bike)"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/checkBox_injuryHitBike"
+                    android:button="@drawable/abc_btn_check_material"
+                    android:buttonTint="#000000"
+                    android:textColor="#020202"
+                    android:theme="@style/MyCheckBox" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hit by (cycle)"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/checkBox_injuryHitCycle"
+                    android:button="@drawable/abc_btn_check_material"
+                    android:buttonTint="#000000"
+                    android:textColor="#020202"
+                    android:theme="@style/MyCheckBox" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crushed in machine"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/checkBox_injuryCrushedMachine"
+                    android:button="@drawable/abc_btn_check_material"
+                    android:buttonTint="#000000"
+                    android:textColor="#020202"
+                    android:theme="@style/MyCheckBox" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cut   "
+                            android:layout_column="1"
+                            android:id="@+id/checkBox_injuryCut"
+                            android:button="@drawable/abc_btn_check_material"
+                            android:buttonTint="#000000"
+                            android:textColor="#020202"
+                            android:theme="@style/MyCheckBox" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Describe:  "
+                            android:layout_column="2"
+                            android:textColor="#212525"
+                            android:id="@+id/textView_injuryCut"
+                            android:layout_marginLeft="30dp" />
+
+
+                        <EditText
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/editText_injuryCut"
+                            android:layout_column="3"
+                            android:background="@drawable/background"
+                            android:layout_height="30dp"
+                            android:layout_width="200dp"
+                            android:textColor="#000000"
+                            android:layout_marginBottom="10dp" />
+
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Violence   "
+                            android:layout_column="1"
+                            android:id="@+id/checkBox_injuryViolence"
+                            android:button="@drawable/abc_btn_check_material"
+                            android:buttonTint="#000000"
+                            android:textColor="#020202"
+                            android:theme="@style/MyCheckBox" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Describe:  "
+                            android:layout_column="2"
+                            android:textColor="#212525"
+                            android:id="@+id/textView_injuryViolence"
+                            android:layout_marginLeft="30dp" />
+
+
+                        <EditText
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/editText_injuryViolence"
+                            android:layout_column="3"
+                            android:background="@drawable/background"
+                            android:layout_height="30dp"
+                            android:layout_width="200dp"
+                            android:textColor="#000000"
+                            android:layout_marginBottom="10dp" />
+
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Others   "
+                            android:layout_column="1"
+                            android:id="@+id/checkBox_injuryOther"
+                            android:button="@drawable/abc_btn_check_material"
+                            android:buttonTint="#000000"
+                            android:textColor="#020202"
+                            android:theme="@style/MyCheckBox" />
+
+
+
+                        <EditText
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/editText_injuryOther"
+                            android:layout_column="3"
+                            android:background="@drawable/background"
+                            android:layout_height="30dp"
+                            android:layout_width="200dp"
+                            android:textColor="#000000"
+                            android:layout_marginBottom="10dp" />
+
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="When sustained?"
+                    android:textColor="#212525"
+                    android:id="@+id/injuryWhen"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/editText_injuryWhen"
+                            android:layout_column="2"
+                            android:background="@drawable/background"
+                            android:layout_height="35dp"
+                            android:layout_width="100dp"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="days"
+                            android:layout_column="4"
+                            android:textColor="#262525"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Problem ?"
+                android:textColor="#212525"
+                android:id="@+id/injuryProblem"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Can't walk"
+                android:layout_marginStart="30dp"
+                android:id="@+id/checkBox_injuryCantWalk"
+                android:button="@drawable/abc_btn_check_material"
+                android:buttonTint="#000000"
+                android:textColor="#020202"
+                android:theme="@style/MyCheckBox" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pain"
+                android:layout_marginStart="30dp"
+                android:id="@+id/checkBox_injuryPain"
+                android:button="@drawable/abc_btn_check_material"
+                android:buttonTint="#000000"
+                android:textColor="#020202"
+                android:theme="@style/MyCheckBox" />
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Can't move   "
+                        android:layout_column="1"
+                        android:id="@+id/checkBox_injuryCantMove"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Which part?  "
+                        android:layout_column="2"
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp" />
+
+
+                    <EditText
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/editText_injuryCantMove"
+                        android:layout_column="3"
+                        android:background="@drawable/background"
+                        android:layout_height="30dp"
+                        android:layout_width="200dp"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="10dp" />
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Any bleeding?"
+                    android:textColor="#212525"
+                    android:id="@+id/injuryBleed"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_injuryBleed"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown"
+                    
+                    android:backgroundTint="#488f05"
+                    android:layout_marginLeft="30dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="(If bleeding, send patient immediately to the nearest hospital after bandaging the part!!!)"
+                    android:textColor="#70065b"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="200dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/backButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/back_button"
+            />
+
+        <Button
+            android:id="@+id/continueButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/continue_button"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back9">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:text="KIOSK LOGIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView4"
+        android:textStyle="normal|bold|italic"
+        android:textAllCaps="true"
+        android:textSize="30sp"
+        android:fontFamily="monospace"
+        android:textColor="#f81010" />
+
+    <TextView
+        android:text="PASSWORD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/uid"
+        android:id="@+id/textView6"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="UID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:textColor="@color/abc_search_url_text_selected"
+        android:layout_above="@+id/password"
+        android:layout_toStartOf="@+id/textView4"
+        android:layout_marginBottom="22dp" />
+
+    <Button
+        android:text="LOGIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold"
+        android:textColor="@color/abc_search_url_text_selected" />
+
+    <Button
+        android:text="NEW REGISTRATION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_marginBottom="19dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold"
+        android:textColor="@color/abc_search_url_text_pressed" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Kiosk ID"
+        android:ems="10"
+        android:id="@+id/uid"
+        android:textColor="?attr/actionModeSplitBackground"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignStart="@+id/button2"
+        android:fontFamily="@string/sans_serif"
+        android:textStyle="normal|bold|italic" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password"
+        android:text="Kiosk ID"
+        android:textColor="?attr/actionModeSplitBackground"
+        android:layout_alignBaseline="@+id/textView6"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6" />
+
+</RelativeLayout>

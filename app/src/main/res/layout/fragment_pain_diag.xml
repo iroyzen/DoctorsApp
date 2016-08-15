@@ -1,0 +1,200 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Headache"
+                android:id="@+id/Head"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Ear Pain"
+                android:id="@+id/Ear"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Teeth Pain"
+                android:id="@+id/Teeth"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Throat Pain"
+                android:id="@+id/Throat"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Back Pain"
+                android:id="@+id/Back"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Joint pain"
+                android:id="@+id/Joint"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Chest Pain"
+                android:id="@+id/Chest"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Abdominal Pain"
+                android:id="@+id/Abdominal"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Breast Pain"
+                android:id="@+id/Breast"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Scrotal Pain"
+                android:id="@+id/Scrotal"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  Perianal"
+                android:id="@+id/Perianal"
+                android:background="@drawable/background"
+                android:button="@drawable/abc_btn_check_material"
+                android:checked="false"
+                android:textAlignment="textStart"
+                android:textColor="#228f0a"
+                android:textSize="20dp"
+                android:textStyle="normal|italic"
+                android:layout_margin="6dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.65"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="92dp"
+            android:layout_weight="1"
+            android:text="Back"
+            android:layout_gravity="bottom" />
+
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:text="Continue"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,183 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.PhysicalExam.MouthExam"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView18"
+        android:layout_gravity="center" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="vertical"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=" Tongue Dryness : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Is the tongue dry?"
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_TongueDry"
+                    android:layout_marginLeft="30dp"
+                    android:backgroundTint="#488f05"
+                    android:background="@drawable/spinner_background" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=" Discoloration of teeth : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Open mouth, shine a torch to affected part, look for black spots on teeth/discolored teeth?"
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_TeethDiscolour"
+                    android:layout_marginLeft="30dp"
+                    android:backgroundTint="#488f05"
+                    android:background="@drawable/spinner_background" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=" Swelling of Gum : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Look for swelling on gums : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_SwellingGum"
+                    android:layout_marginLeft="30dp"
+                    android:backgroundTint="#488f05"
+                    android:background="@drawable/spinner_background" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=" Back of the throat redness/swelling : "
+                    android:textColor="#212525"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Open mouth and stick tongue out and shine a torch to examine the back of throat and look for swelling/redness:"
+                    android:textColor="#212525"
+                    android:id="@+id/abdomenSwellOther"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_ThroatRedness"
+                    android:layout_marginLeft="30dp"
+                    android:backgroundTint="#488f05"
+                    android:background="@drawable/spinner_background" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp">
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="Save"
+                    android:id="@+id/Save_button"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="200dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

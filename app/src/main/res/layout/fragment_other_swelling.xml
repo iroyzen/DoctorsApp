@@ -1,0 +1,371 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.Diagnosis.OtherSwelling"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView5"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Where is it?"
+                        android:textColor="#212525"
+                        android:id="@+id/otherSwellPos"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <EditText
+                        android:layout_width="510dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/background_new"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="30dp"
+                        android:id="@+id/editText_otherSwellPos" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="How many?"
+                        android:textColor="#212525"
+                        android:id="@+id/otherSwellNumber"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:layout_width="148dp"
+                            android:layout_height="wrap_content"
+                            android:text="Single"
+                            android:id="@+id/SingleSwellOther"
+                            android:textColor="#060505"
+                            android:backgroundTint="#f69ff51d"
+                            android:layout_marginLeft="30dp"
+                            android:checked="false"
+                            android:button="@drawable/abc_btn_radio_material"
+                            android:theme="@style/MyCheckBox" />
+
+                        <RadioButton
+                            android:layout_width="148dp"
+                            android:layout_height="wrap_content"
+                            android:text="Multiple"
+                            android:id="@+id/MultipleSwellOther"
+                            android:textColor="#060505"
+                            android:backgroundTint="#f69ff51d"
+                            android:layout_marginLeft="30dp"
+                            android:checked="false"
+                            android:button="@drawable/abc_btn_radio_material"
+                            android:theme="@style/MyCheckBox" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="How long has it been there?"
+                        android:textColor="#212525"
+                        android:id="@+id/otherSwellDuration"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/editText_otherSwellDuration"
+                                android:layout_column="2"
+                                android:background="@drawable/background_new"
+                                android:layout_height="35dp"
+                                android:layout_width="100dp"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="days"
+                                android:id="@+id/textView_otherSwellDuration"
+                                android:layout_column="4"
+                                android:textColor="#262525"
+                                android:layout_marginLeft="10dp" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="How did it start?"
+                        android:textColor="#212525"
+                        android:id="@+id/otherSwellStart"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_otherSwellStart"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Painful or not?"
+                        android:textColor="#212525"
+                        android:id="@+id/otherSwellPain"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_otherSwellPain"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Has it changed in size?"
+                        android:textColor="#212525"
+                        android:id="@+id/otherSwellSize"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_otherSwellSize"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Any change in colour of skin?"
+                        android:textColor="#212525"
+                        android:id="@+id/otherSwellSkin"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_otherSwellSkin"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Any Other Symptom?"
+                        android:textColor="#212525"
+                        android:id="@+id/otherSwellOther"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="Difficulty in Movement"
+                        android:id="@+id/otherSwellDiffMov"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:checked="false"
+                        android:textAlignment="textStart"
+                        android:textColor="#080808"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:textStyle="normal|italic"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="Difficulty in Work"
+                        android:id="@+id/otherSwellDiffWork"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:checked="false"
+                        android:textAlignment="textStart"
+                        android:textColor="#080808"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:textStyle="normal|italic"
+                        android:theme="@style/MyCheckBox" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Other  "
+                                android:id="@+id/otherSwellOtherSymp"
+                                android:layout_column="2"
+                                android:textColor="#262525"
+                                android:layout_marginLeft="10dp" />
+
+                            <EditText
+                                android:inputType="text"
+                                android:ems="10"
+                                android:id="@+id/editText_otherSwellOtherSymp"
+                                android:layout_column="4"
+                                android:background="@drawable/background_new"
+                                android:layout_height="35dp"
+                                android:layout_width="500dp"
+                                android:textColor="#000000"
+                                android:layout_marginBottom="10dp" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Any history of injury?"
+                        android:textColor="#212525"
+                        android:id="@+id/otherSwellhistory"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_otherSwellHistory"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="200dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/backButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/back_button"
+            />
+
+        <Button
+            android:id="@+id/continueButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/continue_button"/>
+    </LinearLayout>
+</FrameLayout>

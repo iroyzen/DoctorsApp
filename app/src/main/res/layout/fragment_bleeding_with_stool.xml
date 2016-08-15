@@ -1,0 +1,202 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.Diagnosis.BleedingWithStool"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView13"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Colour?"
+                        android:textColor="#212525"
+                        android:id="@+id/bleedingWithStoolColour"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_bleedingWithStoolColour"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Amount?"
+                        android:textColor="#212525"
+                        android:id="@+id/bleedingWithStoolAmount"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_bleedingWithStoolAmount"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Pain during passing Stool?"
+                        android:textColor="#212525"
+                        android:id="@+id/bleedingWithStoolPain"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_bleedingWithStoolPain"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Change in bowel habit?"
+                        android:textColor="#212525"
+                        android:id="@+id/bleedingWithStoolBowel"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_bleedingWithStoolBowel"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Constipation?"
+                        android:textColor="#212525"
+                        android:id="@+id/bleedingWithStoolConstipation"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_bleedingWithStoolConstipation"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Diarrhoea?"
+                        android:textColor="#212525"
+                        android:id="@+id/bleedingWithStoolDiarrhoea"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_bleedingWithStoolDiarrhoea"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="200dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/backButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/back_button"
+            />
+
+        <Button
+            android:id="@+id/continueButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/continue_button"/>
+    </LinearLayout>
+</FrameLayout>

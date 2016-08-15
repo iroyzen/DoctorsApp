@@ -1,0 +1,478 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.Diagnosis.Diarrhoea"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView7" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Duration?"
+                        android:textColor="#212525"
+                        android:id="@+id/diarrhoeaDuration"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/editText_diarrhoeaDuration"
+                                android:layout_column="2"
+                                android:background="@drawable/background"
+                                android:layout_height="35dp"
+                                android:layout_width="100dp"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="days"
+                                android:id="@+id/textView_diarrhoeaDuration"
+                                android:layout_column="4"
+                                android:textColor="#262525"
+                                android:layout_marginLeft="10dp" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Stool type?"
+                        android:textColor="#212525"
+                        android:id="@+id/difficultyBreathingStart"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Watery"
+                        android:id="@+id/checkBox_diarrhoeaWatery"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:textColor="#020202"
+                        android:buttonTint="#000000"
+                        android:clickable="true"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Soft"
+                        android:id="@+id/checkBox_diarrhoeaSoft"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:textColor="#020202"
+                        android:buttonTint="#000000"
+                        android:clickable="true"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ill-Formed"
+                        android:id="@+id/checkBox_diarrhoeaIllFormed"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:textColor="#020202"
+                        android:buttonTint="#000000"
+                        android:clickable="true"
+                        android:theme="@style/MyCheckBox" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Other   "
+                                android:id="@+id/checkBox_diarrhoeaOtherReason"
+                                android:button="@drawable/abc_btn_check_material"
+                                android:textColor="#020202"
+                                android:buttonTint="#000000"
+                                android:clickable="true"
+                                android:theme="@style/MyCheckBox" />
+
+                            <EditText
+                                android:inputType="text"
+                                android:ems="10"
+                                android:id="@+id/editText_diarrhoeaStoolOther"
+                                android:layout_column="4"
+                                android:background="@drawable/background"
+                                android:layout_height="35dp"
+                                android:layout_width="500dp"
+                                android:textColor="#000000"
+                                android:layout_marginBottom="10dp" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Nature?"
+                        android:textColor="#212525"
+                        android:id="@+id/diarrhoeaNature"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_diarrhoeaNature"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Frequency?"
+                        android:textColor="#212525"
+                        android:id="@+id/diarrhoeaFrequency"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/editText_diarrhoeaFrequency"
+                                android:layout_column="2"
+                                android:background="@drawable/background"
+                                android:layout_height="35dp"
+                                android:layout_width="100dp"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="freq"
+                                android:id="@+id/textView_diarrhoeaFrequency"
+                                android:layout_column="4"
+                                android:textColor="#262525"
+                                android:layout_marginLeft="10dp" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="With blood?"
+                        android:textColor="#212525"
+                        android:id="@+id/diarrhoeaBlood"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_diarrhoeaBlood"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Any associated symptons?"
+                        android:textColor="#212525"
+                        android:id="@+id/diarrhoeaSymptom"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Abdominal Pain"
+                        android:id="@+id/checkBox_diarrhoeaPain"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:textColor="#020202"
+                        android:clickable="true"
+                        android:buttonTint="#000000"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fever"
+                        android:id="@+id/checkBox_diarrhoeaFever"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:textColor="#020202"
+                        android:clickable="true"
+                        android:buttonTint="#000000"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vomitting"
+                        android:id="@+id/checkBox_diarrhoeaVomit"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:textColor="#020202"
+                        android:buttonTint="#000000"
+                        android:theme="@style/MyCheckBox" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Other   "
+                                android:id="@+id/checkBox_difficultyBreathingOtherSymptom"
+                                android:button="@drawable/abc_btn_check_material"
+                                android:textColor="#020202"
+                                android:clickable="true"
+                                android:buttonTint="#000000"
+                                android:theme="@style/MyCheckBox" />
+
+                            <EditText
+                                android:inputType="text"
+                                android:ems="10"
+                                android:id="@+id/editText_difficultyBreathingOtherSymptom"
+                                android:layout_column="4"
+                                android:background="@drawable/background"
+                                android:layout_height="35dp"
+                                android:layout_width="500dp"
+                                android:textColor="#000000"
+                                android:layout_marginBottom="10dp" />
+
+                        </TableRow>
+                    </TableLayout>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="None"
+                        android:id="@+id/checkBox_diarrhoeaNone"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:textColor="#020202"
+                        android:clickable="true"
+                        android:buttonTint="#000000"
+                        android:theme="@style/MyCheckBox" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Relation with food?"
+                        android:textColor="#212525"
+                        android:id="@+id/diarrhoeaFood"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_diarrhoeaFood"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Any current medication?"
+                        android:textColor="#212525"
+                        android:id="@+id/diarrhoeaMedication"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp">
+
+                                <RadioButton
+                                    android:text="Yes"
+                                    android:id="@+id/diarrhoeaMedicationYes"
+                                    android:layout_column="2"
+                                    android:checked="false"
+                                    android:textColor="#010101"
+                                    android:button="@drawable/abc_btn_radio_material"
+                                    android:buttonTint="#000000"
+                                    android:theme="@style/MyCheckBox" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="Describe  "
+                                    android:id="@+id/textView2"
+                                    android:layout_column="10"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="30dp" />
+
+                                <EditText
+                                    android:layout_width="300dp"
+                                    android:layout_height="35dp"
+                                    android:id="@+id/editText_diarrhoeaMedication"
+                                    android:layout_column="16"
+                                    android:background="@drawable/background"
+                                    android:textColor="#000000" />
+
+                            </TableRow>
+                        </TableLayout>
+
+                        <RadioButton
+                            android:layout_width="148dp"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:id="@+id/diarrhoeaMedicationNo"
+                            android:textColor="#060505"
+                            android:backgroundTint="#f69ff51d"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginBottom="200dp"
+                            android:checked="false"
+                            android:button="@drawable/abc_btn_radio_material"
+                            android:buttonTint="#000000"
+                            android:theme="@style/MyCheckBox" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/backButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/back_button"
+            />
+
+        <Button
+            android:id="@+id/continueButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/continue_button" />
+    </LinearLayout>
+
+</FrameLayout>

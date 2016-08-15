@@ -1,0 +1,555 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.Diagnosis.Dizziness"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView9" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Duration?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessDuration"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/editText_dizzinessDuration"
+                                android:layout_column="2"
+                                android:background="@drawable/background"
+                                android:layout_height="35dp"
+                                android:layout_width="100dp"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="days"
+                                android:id="@+id/textView_dizzinessDuration"
+                                android:layout_column="4"
+                                android:textColor="#262525"
+                                android:layout_marginLeft="10dp" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Nature?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessNature"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_dizzinessNature"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Type?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessType"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Whole Day"
+                        android:id="@+id/checkBox_dizzinessDay"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Part of the day(Morning)"
+                        android:id="@+id/checkBox_dizzinessMorning"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Part of the day(Evening)"
+                        android:id="@+id/checkBox_dizzinessEvening"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Part of the day(Night)"
+                        android:id="@+id/checkBox_dizzinessNight"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Other   "
+                                android:id="@+id/checkBox_dizzinessOtherType"
+                                android:button="@drawable/abc_btn_check_material"
+                                android:buttonTint="#000000"
+                                android:textColor="#020202"
+                                android:theme="@style/MyCheckBox" />
+
+                            <EditText
+                                android:inputType="text"
+                                android:ems="10"
+                                android:id="@+id/editText_dizzinessOtherType"
+                                android:layout_column="4"
+                                android:background="@drawable/background"
+                                android:layout_height="35dp"
+                                android:layout_width="500dp"
+                                android:textColor="#000000"
+                                android:layout_marginBottom="10dp" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="What brings it on?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessStart"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <EditText
+                        android:id="@+id/editText_dizzinessStart"
+                        android:layout_column="2"
+                        android:background="@drawable/background"
+                        android:layout_height="35dp"
+                        android:layout_width="500dp"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="What relieves it?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessRelief"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <EditText
+                        android:id="@+id/editText_dizzinessRelief"
+                        android:layout_column="2"
+                        android:background="@drawable/background"
+                        android:layout_height="35dp"
+                        android:layout_width="500dp"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Relation with position?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessPosition"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lying down"
+                        android:id="@+id/checkBox_dizzinessLying"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Standing Up"
+                        android:id="@+id/checkBox_dizzinessStanding"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Moving Neck"
+                        android:id="@+id/checkBox_dizzinessNeck"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Opening Eyes"
+                        android:id="@+id/checkBox_dizzinessEye"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Other   "
+                                android:id="@+id/checkBox_dizzinessOtherRelation"
+                                android:button="@drawable/abc_btn_check_material"
+                                android:buttonTint="#000000"
+                                android:textColor="#020202"
+                                android:theme="@style/MyCheckBox" />
+
+                            <EditText
+                                android:inputType="text"
+                                android:ems="10"
+                                android:id="@+id/editText_dizzinessOtherRelation"
+                                android:layout_column="4"
+                                android:background="@drawable/background"
+                                android:layout_height="35dp"
+                                android:layout_width="500dp"
+                                android:textColor="#000000"
+                                android:layout_marginBottom="10dp" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="H/O Fainting?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessFainting"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_dizzinessFainting"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="H/O Fall?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessFall"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_dizzinessFall"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Any associated symptons?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessSymptom"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vomiting"
+                        android:id="@+id/checkBox_dizzinessVomiting"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chest Pain"
+                        android:id="@+id/checkBox_dizzinessChest"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Breathlessness"
+                        android:id="@+id/checkBox_dizzinessBreath"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pain in the Ear"
+                        android:id="@+id/checkBox_dizzinessEar"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/abc_btn_check_material"
+                        android:buttonTint="#000000"
+                        android:textColor="#020202"
+                        android:theme="@style/MyCheckBox" />
+
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Other   "
+                                android:id="@+id/checkBox_dizzinessOtherSymptom"
+                                android:button="@drawable/abc_btn_check_material"
+                                android:buttonTint="#000000"
+                                android:textColor="#020202"
+                                android:theme="@style/MyCheckBox" />
+
+                            <EditText
+                                android:inputType="text"
+                                android:ems="10"
+                                android:id="@+id/editText_dizzinessOtherSymptom"
+                                android:layout_column="4"
+                                android:background="@drawable/background"
+                                android:layout_height="35dp"
+                                android:layout_width="500dp"
+                                android:textColor="#000000"
+                                android:layout_marginBottom="10dp" />
+
+                        </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Vision?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessVision"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_dizzinessVision"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Hearing?"
+                        android:textColor="#212525"
+                        android:id="@+id/dizzinessHearing"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner_dizzinessHearing"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
+                        
+                        android:backgroundTint="#488f05"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="200dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/backButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/back_button"
+            />
+
+        <Button
+            android:id="@+id/continueButtonAbdominalPain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/continue_button"/>
+    </LinearLayout>
+</FrameLayout>
