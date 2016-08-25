@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,6 +16,7 @@ import toton.lazycoder.com.helloworld.Diagnosis.Communicator;
 import toton.lazycoder.com.helloworld.PhysicalExamModule;
 import toton.lazycoder.com.helloworld.R;
 import toton.lazycoder.com.helloworld.Utility.SpinnerUtility;
+import toton.lazycoder.com.helloworld.Utility.Toggle;
 
 public class EyeExam extends Fragment implements View.OnClickListener {
 
@@ -26,6 +28,8 @@ public class EyeExam extends Fragment implements View.OnClickListener {
 
     JSONObject info;
     private static final String INFO = "INFO";
+
+    LinearLayout jaundice_body,pallor_body,pupil_body;
 
     public EyeExam() {
         // Required empty public constructor
@@ -67,6 +71,17 @@ public class EyeExam extends Fragment implements View.OnClickListener {
 
         View view = inflater.inflate(R.layout.fragment_eye_exam, container, false);
         view.findViewById(R.id.Save_button).setOnClickListener(this);
+        view.findViewById(R.id.jaundice_header).setOnClickListener(this);
+        view.findViewById(R.id.pallor_header).setOnClickListener(this);
+        view.findViewById(R.id.pupil_header).setOnClickListener(this);
+
+        jaundice_body = (LinearLayout)view.findViewById(R.id.jaundice_body);
+        pallor_body = (LinearLayout)view.findViewById(R.id.pallor_body);
+        pupil_body = (LinearLayout)view.findViewById(R.id.pupil_body);
+
+        jaundice_body.setVisibility(View.GONE);
+        pallor_body.setVisibility(View.GONE);
+        pupil_body.setVisibility(View.GONE);
 
         SpinnerUtility.SpinnerCreate(this,view,info,R.id.spinner_Jaundice,R.array.YesNoExamString,"Jaundice");
         SpinnerUtility.SpinnerCreate(this,view,info,R.id.spinner_EyePallor,R.array.YesNoExamString,"Pallor");
@@ -76,12 +91,36 @@ public class EyeExam extends Fragment implements View.OnClickListener {
     }
     public void onClick(View view)
     {
-        FragmentManager fm = getFragmentManager();
         PhysicalExamModule activity = (PhysicalExamModule) getActivity();
-        if(view.getId()==R.id.Save_button)
+        int id=view.getId();
+
+        switch(id)
         {
-            activity.communicate(Communicator.Response.CONTINUE, info);
+            case R.id.Save_button :
+            {
+                activity.communicate(Communicator.Response.CONTINUE, info);
+                break;
+            }
+
+            case R.id.jaundice_header :
+            {
+                Toggle.toggle_contents(getActivity(),jaundice_body);
+                break;
+            }
+
+            case R.id.pallor_header :
+            {
+                Toggle.toggle_contents(getActivity(),pallor_body);
+                break;
+            }
+
+            case R.id.pupil_header :
+            {
+                Toggle.toggle_contents(getActivity(),pupil_body);
+                break;
+            }
         }
+
     }
 
 }

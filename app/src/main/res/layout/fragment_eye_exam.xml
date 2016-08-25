@@ -20,17 +20,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_width="500dp"
+                    android:layout_height="65dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text=" Jaundice : "
+                    android:text="    Jaundice"
+                    android:id="@+id/jaundice_header"
                     android:textColor="#212525"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp"
-                    android:textAlignment="center"
+                    android:textAlignment="textStart"
                     android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@drawable/guava_spinner" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/jaundice_body">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -40,33 +47,47 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp" />
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jaundiceexample"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp" />
+
                 <Spinner
-                    android:layout_width="400dp"
+                    android:layout_width="260dp"
                     android:layout_height="50dp"
                     android:id="@+id/spinner_Jaundice"
                     android:layout_marginLeft="30dp"
                     android:backgroundTint="#488f05"
-                    android:background="@drawable/spinner_background" />
+                    android:background="@drawable/spinner_background"
+                    android:layout_marginTop="10dp" />
+                </LinearLayout>
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_width="500dp"
+                    android:layout_height="65dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text=" Pallor : "
+                    android:text="    Pallor"
+                    android:id="@+id/pallor_header"
                     android:textColor="#212525"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="20dp"
-                    android:textAlignment="center"
+                    android:textAlignment="textStart"
                     android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@drawable/guava_spinner" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/pallor_body">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -77,33 +98,49 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp" />
 
+                <ImageView
+                    android:layout_width="261dp"
+                    android:layout_height="174dp"
+                    android:src="@drawable/conjunctivaexample"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp" />
+
                 <Spinner
-                    android:layout_width="400dp"
+                    android:layout_width="260dp"
                     android:layout_height="50dp"
                     android:id="@+id/spinner_EyePallor"
                     android:layout_marginLeft="30dp"
                     android:backgroundTint="#488f05"
-                    android:background="@drawable/spinner_background" />
+                    android:background="@drawable/spinner_background"
+                    android:layout_marginTop="10dp" />
+
+                </LinearLayout>
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text=" Pupil : "
-                    android:textColor="#212525"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="20dp"
-                    android:textAlignment="center"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="500dp"
+                        android:layout_height="65dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="    Pupil"
+                        android:id="@+id/pupil_header"
+                        android:textColor="#212525"
+                        android:layout_marginLeft="30dp"
+                        android:textAlignment="textStart"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:background="@drawable/guava_spinner" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/pupil_body">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -115,12 +152,13 @@
                     android:layout_marginTop="20dp" />
 
                 <Spinner
-                    android:layout_width="400dp"
+                    android:layout_width="260dp"
                     android:layout_height="50dp"
                     android:id="@+id/spinner_Pupil"
                     android:layout_marginLeft="30dp"
                     android:backgroundTint="#488f05"
                     android:background="@drawable/spinner_background" />
+                </LinearLayout>
 
 
             </LinearLayout>

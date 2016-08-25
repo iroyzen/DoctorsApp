@@ -38,6 +38,7 @@ import toton.lazycoder.com.helloworld.PhysicalExam.MouthExam;
 import toton.lazycoder.com.helloworld.PhysicalExam.NeckExam;
 import toton.lazycoder.com.helloworld.PhysicalExam.RectalAreaExam;
 import toton.lazycoder.com.helloworld.PhysicalExam.ScrotalExam;
+import toton.lazycoder.com.helloworld.PhysicalExam.Test;
 import toton.lazycoder.com.helloworld.R;
 
 public class PhysicalExamModule extends AppCompatActivity implements AdapterView.OnItemClickListener, Communicator, View.OnClickListener {
