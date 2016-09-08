@@ -22,6 +22,7 @@ import android.widget.Toast;
 import android.content.SharedPreferences;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -66,7 +67,6 @@ import toton.lazycoder.com.helloworld.Diagnosis.ThroatSwelling;
 import toton.lazycoder.com.helloworld.Diagnosis.Ulcer;
 import toton.lazycoder.com.helloworld.Diagnosis.Vomiting;
 import toton.lazycoder.com.helloworld.Diagnosis.YellowUrine;
-import toton.lazycoder.com.helloworld.PhysicalExam.AbdomenExam;
 
 public class ComplainModule extends AppCompatActivity implements Communicator, View.OnClickListener{
 
@@ -112,7 +112,13 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
         PhyExamInfo = new JSONArray();
 
         Category = new JSONObject();
-        Patient = new JSONObject();
+        try {
+            Patient = new JSONObject(getIntent().getStringExtra("Patient"));
+        }
+        catch (JSONException e)
+        {
+            e.printStackTrace();
+        }
 
         Button Finish = (Button)findViewById(R.id.finish);
         Finish.setOnClickListener(this);
