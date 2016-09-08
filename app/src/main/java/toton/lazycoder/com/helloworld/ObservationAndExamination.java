@@ -25,9 +25,6 @@ public class ObservationAndExamination extends AppCompatActivity implements Comm
     JSONObject Patient;
     JSONObject GeneralObs;
 
-    public HashMap<String, Fragment> completedExams = new HashMap<>();
-    List<String> checked = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
