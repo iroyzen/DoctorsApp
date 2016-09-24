@@ -51,9 +51,13 @@ public class Demographics extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demographics);
-
-        info=new JSONObject();
-        demographics = new JSONObject();
+        try {
+            info = new JSONObject(getIntent().getStringExtra("Patient"));
+            demographics = new JSONObject();
+        }catch(JSONException e)
+        {
+            e.printStackTrace();
+        }
 
         b = (Button)findViewById(R.id.submit);
         b.setOnClickListener(this);

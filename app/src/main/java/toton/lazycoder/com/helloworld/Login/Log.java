@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 
 import toton.lazycoder.com.helloworld.R;
@@ -20,11 +23,16 @@ import toton.lazycoder.com.helloworld.R;
 
 public class Log extends AppCompatActivity {
     EditText t1,t2;
+    JSONObject Login;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kiosk_login);
+
+        Login=new JSONObject();
+
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-        File myDir = new File(getCacheDir(), "com.DoctorsApp.files");
+        /*File myDir = new File(getCacheDir(), "com.DoctorsApp.files");
         if (!myDir.exists()) {
             if (!(myDir.mkdir())) //directory is created;
             {
@@ -34,7 +42,7 @@ public class Log extends AppCompatActivity {
             {
                 Toast.makeText(this, "Created directory"+getCacheDir()+"/"+"com.DoctorsApp.files", Toast.LENGTH_SHORT).show();
             }
-        }
+        }*/
         Button b = (Button) findViewById(R.id.login);
         t1 = (EditText) findViewById(R.id.uid);
         t2 = (EditText) findViewById(R.id.password);
@@ -43,7 +51,19 @@ public class Log extends AppCompatActivity {
             public void onClick(View view) {
                 boolean bool = check(t1.getText().toString(), t2.getText().toString());
                 if (bool) {
+
+                    try{
+
+                        Login.put("KioskID",t1.getText().toString());
+
+                    }catch(JSONException e)
+                    {
+                        e.printStackTrace();
+                    }
+
+
                     Intent i = new Intent(Log.this, patient_log.class);
+                    i.putExtra("Login",Login.toString());
                     startActivity(i);
                 }
             }
