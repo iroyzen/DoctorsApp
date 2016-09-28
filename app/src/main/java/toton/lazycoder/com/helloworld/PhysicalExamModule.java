@@ -48,6 +48,7 @@ public class PhysicalExamModule extends AppCompatActivity implements AdapterView
 
     public JSONArray PhyExamInfo = new JSONArray();
     public JSONObject Patient;
+    JSONObject Section3;
     JSONObject PhysicalExam;
 
     @Override
@@ -62,6 +63,7 @@ public class PhysicalExamModule extends AppCompatActivity implements AdapterView
         try {
             PhyExamInfo = new JSONArray(getIntent().getStringExtra("ExamValue"));
             Patient = new JSONObject(getIntent().getStringExtra("Patient"));
+            Section3 = new JSONObject(Patient.get("Section 3").toString());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -98,7 +100,8 @@ public class PhysicalExamModule extends AppCompatActivity implements AdapterView
         if (view.getId() == R.id.finish) {
 
             try{
-                Patient.put("Physical Exam",PhysicalExam);
+                Section3.put("Physical Exam",PhysicalExam);
+                Patient.put("Section 3",Section3);
             }catch(Exception e)
             {
                 e.printStackTrace();

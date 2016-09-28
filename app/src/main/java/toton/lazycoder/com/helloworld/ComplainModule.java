@@ -76,6 +76,7 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
     AlreadyDiagnosedListAdapter alreadyDiagnosedAdapter;
 
     JSONObject Patient;
+    JSONObject Section3=new JSONObject();;
     JSONObject Category;
     JSONObject Pain = new JSONObject();
     JSONObject Swelling = new JSONObject();
@@ -269,7 +270,8 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
                 if(CommonCold.length()!=0)
                     Category.put("Common Cold",CommonCold);
 
-                Patient.put("Category",Category);
+                Section3.put("Complaint",Category);
+                Patient.put("Section 3",Section3);
 
             }catch (Exception e)
             {

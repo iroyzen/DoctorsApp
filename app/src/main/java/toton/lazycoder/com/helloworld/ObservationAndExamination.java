@@ -23,7 +23,7 @@ public class ObservationAndExamination extends AppCompatActivity implements Comm
     FragmentManager fragmentManager;
     JSONArray PhyExamInfo = new JSONArray();
     JSONObject Patient;
-    JSONObject GeneralObs;
+    JSONObject Section3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class ObservationAndExamination extends AppCompatActivity implements Comm
         try{
             PhyExamInfo = new JSONArray(getIntent().getStringExtra("ExamValue"));
             Patient = new JSONObject(getIntent().getStringExtra("Patient"));
+            Section3 = new JSONObject(Patient.get("Section 3").toString());
         }catch (Exception e)
         {
             e.printStackTrace();
@@ -57,7 +58,8 @@ public class ObservationAndExamination extends AppCompatActivity implements Comm
         {
             try
             {
-                Patient.put("General Observation",info);
+                Section3.put("General Observation",info);
+                Patient.put("Section 3",Section3);
             }catch (Exception e)
             {
                 e.printStackTrace();
