@@ -1075,4 +1075,13 @@
     </string-array>
     <string name="title_activity_show_complaints">ShowComplaints</string>
 
+    <string-array name="imageFor">
+        <item>one</item>
+        <item>two</item>
+        <item>three</item>
+        <item>four</item>
+        <item>five</item>
+        <item>six</item>
+    </string-array>
+
 </resources>

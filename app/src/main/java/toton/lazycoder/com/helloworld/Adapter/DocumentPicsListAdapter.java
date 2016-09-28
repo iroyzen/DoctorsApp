@@ -24,9 +24,9 @@ public class DocumentPicsListAdapter extends BaseAdapter {
     Context context;
     Bitmap deleteBitmap;
 
-    public DocumentPicsListAdapter(Context context, int icon, List<String> diseases){
+    public DocumentPicsListAdapter(Context context, int icon, List<String> pictures){
         deleteBitmap = BitmapFactory.decodeResource(context.getResources(), icon);
-        this.docs = diseases;
+        this.docs = pictures;
         this.context = context;
     }
 
@@ -67,6 +67,8 @@ public class DocumentPicsListAdapter extends BaseAdapter {
         holder.docs.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
+
 
             }
         });

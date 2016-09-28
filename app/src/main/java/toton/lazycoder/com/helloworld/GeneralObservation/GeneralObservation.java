@@ -3,7 +3,11 @@ package toton.lazycoder.com.helloworld.GeneralObservation;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -28,6 +32,7 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -39,12 +44,16 @@ import java.util.List;
 import java.util.Locale;
 
 import toton.lazycoder.com.helloworld.Adapter.AlreadyDiagnosedListAdapter;
+import toton.lazycoder.com.helloworld.Adapter.CustomImageAdapter;
 import toton.lazycoder.com.helloworld.Adapter.DocumentPicsListAdapter;
+import toton.lazycoder.com.helloworld.Adapter.GetSet;
 import toton.lazycoder.com.helloworld.Diagnosis.Communicator;
 import toton.lazycoder.com.helloworld.Diagnosis.NothingSelectedSpinnerAdapter;
 import toton.lazycoder.com.helloworld.ObservationAndExamination;
 import toton.lazycoder.com.helloworld.R;
 import toton.lazycoder.com.helloworld.Utility.SpinnerUtility;
+
+
 
 
 public class GeneralObservation extends Fragment implements View.OnClickListener, AdapterView.OnItemSelectedListener {
@@ -55,7 +64,7 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
     private String mParam1;
     private String mParam2;
 
-    private static final int CAMERA_REQUEST = 1888;
+    private static final int CAMERA_REQUEST = 1;
     String mCurrentPhotoPath;
 
     JSONObject info;
@@ -79,6 +88,17 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
     List<String> documents = new ArrayList<>();
     ListView documentPicList;
     DocumentPicsListAdapter documentPicsListAdapter;
+
+    CustomImageAdapter customImageAdapter;
+    ArrayList<GetSet> getSets;
+    ListView listView;
+
+    // Temp save listItem position
+    int position;
+
+    int imageCount;
+    String imageTempName;
+    String[] imageFor;
 
     public GeneralObservation() {
     }
@@ -128,9 +148,28 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
         spinner.setAdapter(new NothingSelectedSpinnerAdapter(dataAdapter, R.layout.spinner_row_nothing_selected, getActivity()));
         spinner.setOnItemSelectedListener(this);
 
-        documentPicList = (ListView) view.findViewById(R.id.document_pic_list);
-        documentPicsListAdapter = new DocumentPicsListAdapter(getActivity(), R.drawable.red_cross, documents);
-        documentPicList.setAdapter(documentPicsListAdapter);
+        //documentPicList = (ListView) view.findViewById(R.id.document_pic_list);
+        //documentPicsListAdapter = new DocumentPicsListAdapter(getActivity(), R.drawable.red_cross, documents);
+        //documentPicList.setAdapter(documentPicsListAdapter);
+
+        listView = (ListView) view.findViewById(R.id.document_pic_list);
+        getSets = new ArrayList<GetSet>();
+        imageFor = getResources().getStringArray(R.array.imageFor);
+        for (int i = 0; i < 3; i++) {
+
+            GetSet inflate = new GetSet();
+            // Global Values
+            inflate.setUid(String.valueOf(i));
+
+            inflate.setLabel("Image");
+            inflate.setHaveImage(false);
+            inflate.setSubtext(imageFor[i]);
+            inflate.setStatus(true);
+
+            getSets.add(inflate);
+        }
+        customImageAdapter = new CustomImageAdapter(getSets, getActivity());
+        listView.setAdapter(customImageAdapter);
 
         return view;
     }
@@ -169,10 +208,9 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
 
         if (!(position == 0)) {
             String item = parent.getItemAtPosition(position).toString();
-            dispatchTakePictureIntent();
-            /*Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(cameraIntent, CAMERA_REQUEST);
-            Toast.makeText(parent.getContext(), item, Toast.LENGTH_SHORT).show();*/
+            int i=0;
+            captureImage(i++,"newtest"+i+".jpg");
+            //dispatchTakePictureIntent();
         }
     }
 
@@ -180,13 +218,56 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
         // TODO Auto-generated method stub
     }
 
+    public void captureImage(int pos, String imageName) {
+        position = pos;
+        imageTempName = imageName;
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(intent, REQUEST_TAKE_PHOTO);
+    }
+
+    private void onCaptureImageResult(Intent data) {
+
+        Bundle extras = data.getExtras();
+        Bitmap imageBitmap = (Bitmap) extras.get("data");
+
+        // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
+        Uri tempUri = getImageUri(getActivity().getApplicationContext(), imageBitmap, imageTempName);
+        String picturePath = getRealPathFromURI(tempUri);
+        customImageAdapter.setImageInItem(position, imageBitmap, picturePath);
+
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_TAKE_PHOTO && resultCode == Activity.RESULT_OK) {
-            //Bitmap photo = (Bitmap) data.getExtras().get("data");
-            documents.add(mCurrentPhotoPath);
-            documentPicsListAdapter.notifyDataSetChanged();
+
+            onCaptureImageResult(data);
+            //documents.add(mCurrentPhotoPath);
+            //documentPicsListAdapter.notifyDataSetChanged();
         }
+    }
+
+    public Uri getImageUri(Context inContext, Bitmap inImage, String imageName) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        inImage.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
+        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, imageName, null);
+        return Uri.parse(path);
+    }
+
+    public String getRealPathFromURI(Uri uri) {
+        Cursor cursor = getActivity().getContentResolver().query(uri, null, null, null, null);
+        cursor.moveToFirst();
+        int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+        return cursor.getString(idx);
+    }
+
+    public Bitmap convertSrcToBitmap(String imageSrc) {
+        Bitmap myBitmap = null;
+        File imgFile = new File(imageSrc);
+        if (imgFile.exists()) {
+            myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+        }
+        return myBitmap;
     }
 
     TextWatcher inputTextWatcher = new TextWatcher() {
@@ -213,8 +294,7 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
-        //File myDir = getActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        //File myDir = new File("/storage/sdcard0/Android/Doctor");
+
         File myDir = new File(Environment.getExternalStorageDirectory(), "/Android/Doctor");
         if (!myDir.exists()) {
             if (!(myDir.mkdir())) //directory is created;
@@ -228,9 +308,9 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
         }
         Toast.makeText(getActivity(), ""+myDir, Toast.LENGTH_SHORT).show();
         File image = File.createTempFile(
-            imageFileName,  /* prefix */
-               ".jpg",         /* suffix */
-              myDir      /* directory */
+            imageFileName,
+               ".jpg",
+              myDir
         );
 
 
@@ -252,13 +332,21 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
                 Toast.makeText(getActivity(), "Couldn't create file"+ex, Toast.LENGTH_SHORT).show();
                 ex.printStackTrace();
             }
-            Toast.makeText(getActivity(), "Passed2", Toast.LENGTH_SHORT).show();
+
             if (photoFile != null) {
                 Uri photoURI = FileProvider.getUriForFile(getActivity(),
                         "com.example.android.fileprovider",
                         photoFile);
-                Toast.makeText(getActivity(), "Passed3", Toast.LENGTH_SHORT).show();
+
+
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+
+                List<ResolveInfo> resInfoList = getActivity().getPackageManager().queryIntentActivities(takePictureIntent, PackageManager.MATCH_DEFAULT_ONLY);
+                for (ResolveInfo resolveInfo : resInfoList) {
+                    String packageName = resolveInfo.activityInfo.packageName;
+                    getActivity().grantUriPermission(packageName, photoURI, Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                }
+
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
             }
         }
