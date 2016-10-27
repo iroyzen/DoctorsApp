@@ -8,6 +8,7 @@ import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -17,12 +18,14 @@ import android.support.v4.content.FileProvider;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.Spinner;
@@ -40,6 +43,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -84,6 +88,8 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
     float HeightCalc;
     private static DecimalFormat BMIshow = new DecimalFormat(".##");
     static final int REQUEST_TAKE_PHOTO = 1;
+
+    LinearLayout myScroll;
 
     List<String> documents = new ArrayList<>();
     ListView documentPicList;
@@ -131,6 +137,15 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
         View view = inflater.inflate(R.layout.fragment_general_observation, container, false);
         view.findViewById(R.id.backButton).setOnClickListener(this);
         view.findViewById(R.id.continueButton).setOnClickListener(this);
+        view.findViewById(R.id.buttonPrevPres).setOnClickListener(this);
+        view.findViewById(R.id.buttonXray).setOnClickListener(this);
+        view.findViewById(R.id.buttonUSG).setOnClickListener(this);
+        view.findViewById(R.id.buttonLabReport).setOnClickListener(this);
+        view.findViewById(R.id.buttonOthers).setOnClickListener(this);
+
+        myScroll=(LinearLayout)view.findViewById(R.id.myScroll);
+
+        imageCount=0;
         BMI = (TextView) view.findViewById(R.id.textView_BMI);
         Weight = (EditText) view.findViewById(R.id.editText_Weight);
         Height = (EditText) view.findViewById(R.id.editText_Height);
@@ -142,32 +157,14 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
         Weight.addTextChangedListener(inputTextWatcher);
         Height.addTextChangedListener(inputTextWatcher);
 
-        Spinner spinner = (Spinner) view.findViewById(R.id.spinner_PreviousDocuments);
-        ArrayAdapter<CharSequence> dataAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.previousDocuments, android.R.layout.simple_spinner_item);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(new NothingSelectedSpinnerAdapter(dataAdapter, R.layout.spinner_row_nothing_selected, getActivity()));
-        spinner.setOnItemSelectedListener(this);
-
-        //documentPicList = (ListView) view.findViewById(R.id.document_pic_list);
-        //documentPicsListAdapter = new DocumentPicsListAdapter(getActivity(), R.drawable.red_cross, documents);
-        //documentPicList.setAdapter(documentPicsListAdapter);
+        /*documentPicList = (ListView) view.findViewById(R.id.document_pic_list);
+        documentPicsListAdapter = new DocumentPicsListAdapter(getActivity(), R.drawable.red_cross, documents);
+        documentPicList.setAdapter(documentPicsListAdapter);*/
 
         listView = (ListView) view.findViewById(R.id.document_pic_list);
         getSets = new ArrayList<GetSet>();
         imageFor = getResources().getStringArray(R.array.imageFor);
-        for (int i = 0; i < 3; i++) {
 
-            GetSet inflate = new GetSet();
-            // Global Values
-            inflate.setUid(String.valueOf(i));
-
-            inflate.setLabel("Image");
-            inflate.setHaveImage(false);
-            inflate.setSubtext(imageFor[i]);
-            inflate.setStatus(true);
-
-            getSets.add(inflate);
-        }
         customImageAdapter = new CustomImageAdapter(getSets, getActivity());
         listView.setAdapter(customImageAdapter);
 
@@ -181,27 +178,55 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.backButton) {
-            //Communicator activity = (Communicator) getActivity();
-            //activity.communicate(Communicator.Response.BACK, null);
-        } else if (view.getId() == R.id.continueButton) {
-            try{
-                info.put("Height",Height.getText().toString());
-                info.put("Weight",Weight.getText().toString());
-                info.put("BMI",BMI.getText().toString());
-                info.put("Pulse",Pulse.getText().toString());
-                info.put("BP",BP.getText().toString());
-                info.put("Temperature",Temperature.getText().toString());
-                info.put("Past Medical History",PastHistory.getText().toString());
 
-            }catch(Exception e)
-            {
-                e.printStackTrace();
-            }
+        int ID = view.getId();
 
-            ObservationAndExamination activity = (ObservationAndExamination) getActivity();
-            activity.communicate(Communicator.Response.CONTINUE, info);
+        switch (ID)
+        {
+            case R.id.backButton:
+                break;
+
+            case R.id.continueButton:
+                try{
+                    info.put("Height",Height.getText().toString());
+                    info.put("Weight",Weight.getText().toString());
+                    info.put("BMI",BMI.getText().toString());
+                    info.put("Pulse",Pulse.getText().toString());
+                    info.put("BP",BP.getText().toString());
+                    info.put("Temperature",Temperature.getText().toString());
+                    info.put("Past Medical History",PastHistory.getText().toString());
+
+                }catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
+
+                ObservationAndExamination activity = (ObservationAndExamination) getActivity();
+                activity.communicate(Communicator.Response.CONTINUE, info);
+                break;
+
+            case R.id.buttonPrevPres:
+                dispatchTakePictureIntent("Previous Presciption_");
+
+                break;
+            case R.id.buttonXray:
+                dispatchTakePictureIntent("Previous Xray_");
+
+                break;
+            case R.id.buttonUSG:
+                dispatchTakePictureIntent("Previous USG_");
+
+                break;
+            case R.id.buttonLabReport:
+                dispatchTakePictureIntent("Previous Lab Reports_");
+
+                break;
+            case R.id.buttonOthers:
+                dispatchTakePictureIntent("Others_");
+
+                break;
         }
+
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -226,14 +251,30 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
     }
 
     private void onCaptureImageResult(Intent data) {
+        final int THUMBSIZE = 64;
+        String photopath="/storage/sdcard0/Android/Doctor/"+imageTempName;
+        Bitmap imageBitmap = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(photopath),
+                THUMBSIZE, THUMBSIZE);
 
-        Bundle extras = data.getExtras();
+        /*Bundle extras = data.getExtras();
         Bitmap imageBitmap = (Bitmap) extras.get("data");
+
 
         // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
         Uri tempUri = getImageUri(getActivity().getApplicationContext(), imageBitmap, imageTempName);
-        String picturePath = getRealPathFromURI(tempUri);
-        customImageAdapter.setImageInItem(position, imageBitmap, picturePath);
+        String picturePath = getRealPathFromURI(tempUri);*/
+
+        GetSet inflate = new GetSet();
+        // Global Values
+        inflate.setUid(String.valueOf(imageCount));
+
+        inflate.setLabel(imageTempName);
+        inflate.setHaveImage(false);
+        inflate.setStatus(true);
+
+        getSets.add(inflate);
+        customImageAdapter.setImageInItem(position, imageBitmap, photopath);
+        imageCount++;
 
     }
 
@@ -244,6 +285,7 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
             onCaptureImageResult(data);
             //documents.add(mCurrentPhotoPath);
             //documentPicsListAdapter.notifyDataSetChanged();
+            //imageCount++;
         }
     }
 
@@ -290,10 +332,10 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
 
     };
 
-    private File createImageFile() throws IOException {
+    private File createImageFile(String imageFileName) throws IOException {
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(new Date());
-        String imageFileName = "JPEG_" + timeStamp + "_";
+        //String imageFileName = "JPEG_" + timeStamp + "_";
 
         File myDir = new File(Environment.getExternalStorageDirectory(), "/Android/Doctor");
         if (!myDir.exists()) {
@@ -307,27 +349,29 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
             }
         }
         Toast.makeText(getActivity(), ""+myDir, Toast.LENGTH_SHORT).show();
-        File image = File.createTempFile(
-            imageFileName,
+        File image= new File(myDir+"/"+imageFileName+(imageCount)+".jpg");
+        imageTempName=imageFileName+(imageCount)+".jpg";
+        /*File image = File.createTempFile(
+            imageFileName+(imageCount++),
                ".jpg",
               myDir
-        );
+        );*/
 
 
 
         // Save a file: path for use with ACTION_VIEW intents
         Toast.makeText(getActivity(), "Passed1", Toast.LENGTH_SHORT).show();
-        mCurrentPhotoPath = "file:" + image.getAbsolutePath();
+        mCurrentPhotoPath = "file://" + image.getAbsolutePath();
         return image;
     }
 
-    private void dispatchTakePictureIntent() {
+    private void dispatchTakePictureIntent(String imageFileName) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
         if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
             File photoFile = null;
             try {
-                photoFile = createImageFile();
+                photoFile = createImageFile(imageFileName);
             } catch (IOException ex) {
                 Toast.makeText(getActivity(), "Couldn't create file"+ex, Toast.LENGTH_SHORT).show();
                 ex.printStackTrace();
@@ -346,11 +390,14 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
                     String packageName = resolveInfo.activityInfo.packageName;
                     getActivity().grantUriPermission(packageName, photoURI, Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 }
+                position=imageCount;
 
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
             }
         }
     }
+
+
 
 }
 

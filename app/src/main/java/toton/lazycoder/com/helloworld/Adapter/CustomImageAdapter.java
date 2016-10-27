@@ -5,8 +5,10 @@ package toton.lazycoder.com.helloworld.Adapter;
  */
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +21,7 @@ import toton.lazycoder.com.helloworld.R;
 import toton.lazycoder.com.helloworld.ObservationAndExamination;
 import toton.lazycoder.com.helloworld.Adapter.GetSet;
 
+import java.io.File;
 import java.util.List;
 
 public class CustomImageAdapter extends BaseAdapter {
@@ -48,21 +51,20 @@ public class CustomImageAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         View view = convertView;
 
         if (view == null) {
             LayoutInflater li = (LayoutInflater) _c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = li.inflate(R.layout.picture_list, null);
+            view = li.inflate(R.layout.document_pics_list, null);
         } else {
             view = convertView;
         }
 
         v = new ViewHolder();
-        v.clickImage = (ImageButton) view.findViewById(R.id.capture);
         v.removeImage = (ImageButton) view.findViewById(R.id.cancel);
         v.parcelName = (TextView) view.findViewById(R.id.parcelName);
-        v.label = (TextView) view.findViewById(R.id.imageFor);
+        //v.label = (TextView) view.findViewById(R.id.imageFor);
         v.imageView = (ImageView) view.findViewById(R.id.imgPrv);
 
         // Set data in listView
@@ -77,32 +79,36 @@ public class CustomImageAdapter extends BaseAdapter {
             v.imageView.setImageBitmap(dataSet.getImage());
         }
         v.parcelName.setText(dataSet.getLabel());
-        v.label.setText(dataSet.getSubtext());
+        //v.label.setText(dataSet.getSubtext());
         if (dataSet.isStatus()) {
-            v.clickImage.setVisibility(View.VISIBLE);
             v.removeImage.setVisibility(View.GONE);
         } else {
             v.removeImage.setVisibility(View.VISIBLE);
-            v.clickImage.setVisibility(View.GONE);
         }
 
-        v.clickImage.setFocusable(false);
         v.removeImage.setFocusable(false);
 
 
-        v.clickImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Call parent method of activity to click image
-                //((Activity) _c).captureImage(dataSet.getListItemPosition(), dataSet.getLabel() + "" + dataSet.getSubtext());
+        v.imageView.setOnClickListener(new View.OnClickListener(){
+        @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.setDataAndType(Uri.parse("file://" + "/storage/sdcard0/Android/Doctor/"+ dataSet.getLabel()), "image/*");
+                _c.startActivity(intent);
             }
+
         });
 
         v.removeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dataSet.setStatus(true);
-                dataSet.setHaveImage(false);
+                //dataSet.setStatus(true);
+                //dataSet.setHaveImage(false);
+                File file=new File("/storage/sdcard0/Android/Doctor/"+ dataSet.getLabel());
+                boolean delete = file.delete();
+                _data.remove(position);
                 notifyDataSetChanged();
             }
         });
@@ -126,7 +132,7 @@ public class CustomImageAdapter extends BaseAdapter {
     static class ViewHolder {
         ImageView imageView;
         TextView label, parcelName;
-        ImageButton clickImage, removeImage;
+        ImageButton removeImage;
     }
 
 }

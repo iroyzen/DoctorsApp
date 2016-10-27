@@ -42,15 +42,15 @@ public class GetSet {
 
     boolean haveImage;
 
-    public String getSubtext() {
+    /*public String getSubtext() {
         return subtext;
-    }
+    }*/
 
-    public void setSubtext(String subtext) {
+    /*public void setSubtext(String subtext) {
         this.subtext = subtext;
-    }
+    }*/
 
-    String subtext;
+    //String subtext;
     boolean status;
 
     public String getLabel() {

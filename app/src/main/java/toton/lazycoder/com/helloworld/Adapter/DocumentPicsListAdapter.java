@@ -55,8 +55,8 @@ public class DocumentPicsListAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.document_pics_list, null);
 
             holder = new ViewHolder();
-            holder.docs = (TextView) convertView.findViewById(R.id.docs);
-            holder.delete = (ImageView) convertView.findViewById(R.id.delete);
+            holder.docs = (TextView) convertView.findViewById(R.id.label);
+            holder.delete = (ImageView) convertView.findViewById(R.id.cancel);
             convertView.setTag(holder);
         }else {
             holder = (ViewHolder) convertView.getTag();

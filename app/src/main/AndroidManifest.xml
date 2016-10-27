@@ -53,21 +53,24 @@
         </activity>
         <activity
             android:name=".ObservationAndExamination"
-            android:label="@string/title_activity_observation_and_examination">
+            android:label="@string/title_activity_observation_and_examination"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="toton.lazycoder.com.helloworld.ComplainModule" />
         </activity>
         <activity
             android:name=".PhysicalExamModule"
-            android:label="@string/title_activity_physical_exam_module">
+            android:label="@string/title_activity_physical_exam_module"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="toton.lazycoder.com.helloworld.ObservationAndExamination" />
         </activity>
         <activity
             android:name=".ShowComplaints"
-            android:label="@string/title_activity_show_complaints">
+            android:label="@string/title_activity_show_complaints"
+            android:screenOrientation="landscape">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
