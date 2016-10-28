@@ -16,9 +16,12 @@ import java.util.HashMap;
 import java.util.List;
 
 import toton.lazycoder.com.helloworld.Diagnosis.Communicator;
+import toton.lazycoder.com.helloworld.GeneralObservation.FamilyHistory;
 import toton.lazycoder.com.helloworld.GeneralObservation.GeneralObservation;
+import toton.lazycoder.com.helloworld.GeneralObservation.MedicalHistory;
+import toton.lazycoder.com.helloworld.Utility.Globals;
 
-public class ObservationAndExamination extends AppCompatActivity implements Communicator {
+public class ObservationAndExamination extends AppCompatActivity {
 
     FragmentManager fragmentManager;
     JSONArray PhyExamInfo = new JSONArray();
@@ -46,31 +49,53 @@ public class ObservationAndExamination extends AppCompatActivity implements Comm
         ft.add(R.id.ObservationAndExam,START).commit();
     }
 
-    @Override
-    public void communicate(Communicator.Response response, JSONObject info){
-        if(response == Communicator.Response.BACK)
+
+    public void communicate(Communicator.Response response, JSONObject info, int id){
+
+        if(response == Communicator.Response.CONTINUE)
         {
 
-        }else if(response == Communicator.Response.RESET)
-        {
+            if(id==0) {
+                try {
+                    Section3.put("General Observation", info);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
-        }else if(response == Communicator.Response.CONTINUE)
-        {
-            try
-            {
-                Section3.put("General Observation",info);
-                Patient.put("Section 3",Section3);
-            }catch (Exception e)
-            {
-                e.printStackTrace();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.ObservationAndExam,new MedicalHistory()).commit();
+
             }
+            else if(id == 1)
+            {
+                try {
+                    Section3.put("Medical History", info);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
-            Intent i = new Intent(this,PhysicalExamModule.class);
-            if(PhyExamInfo.length()!=0) {
-                i.putExtra("ExamValue", PhyExamInfo.toString());
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.ObservationAndExam,new FamilyHistory()).commit();
+
+
             }
-            i.putExtra("Patient", Patient.toString());
-            startActivity(i);
+            else if(id == 2)
+            {
+                try {
+                    Section3.put("Family History", info);
+                    Patient.put("Section 3",Section3);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                Intent i = new Intent(this, PhysicalExamModule.class);
+                if (PhyExamInfo.length() != 0) {
+                    i.putExtra("ExamValue", PhyExamInfo.toString());
+                }
+                i.putExtra("Patient", Patient.toString());
+                //Globals.PatientData=Patient;
+                startActivity(i);
+            }
         }
     }
 

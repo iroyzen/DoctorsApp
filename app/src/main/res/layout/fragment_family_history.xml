@@ -1,0 +1,749 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="toton.lazycoder.com.helloworld.GeneralObservation.FamilyHistory"
+    app:layout_collapseParallaxMultiplier="1.0"
+    android:background="@android:color/background_light">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:text="Patient's Medical History :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView10"
+        android:fontFamily="serif"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <Button
+            android:text="      Mother"
+            android:layout_width="531dp"
+            android:layout_height="66dp"
+            android:id="@+id/button_Mother"
+            android:background="#f1656161"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical|start"
+            android:textAllCaps="false"
+            style="@android:style/Widget.Button"
+            android:layout_marginBottom="2dp" />
+
+        <RelativeLayout
+            android:layout_width="531dp"
+            android:layout_height="191dp"
+            android:layout_marginStart="40dp"
+            android:id="@+id/Mother_History"
+            android:background="#42999898"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-2dp">
+
+
+            <CheckBox
+                android:text="  High BP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="31dp"
+                android:id="@+id/Mother_BP"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox" />
+
+            <CheckBox
+                android:text="  Heart Attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Mother_HeartAttack"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Mother_BP"
+                android:layout_alignBottom="@+id/Mother_BP"
+                android:layout_toEndOf="@+id/Mother_BP"
+                android:layout_marginStart="31dp" />
+
+            <CheckBox
+                android:text="  Stroke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Mother_Stroke"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_marginStart="37dp"
+                android:layout_alignBaseline="@+id/Mother_HeartAttack"
+                android:layout_alignBottom="@+id/Mother_HeartAttack"
+                android:layout_toEndOf="@+id/Mother_HeartAttack" />
+
+            <CheckBox
+                android:text="  Diabetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Mother_Diabetes"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Mother_Stroke"
+                android:layout_alignBottom="@+id/Mother_Stroke"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp" />
+
+            <CheckBox
+                android:text="  Asthma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Mother_Asthma"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_below="@+id/Mother_BP"
+                android:layout_alignStart="@+id/Mother_BP"
+                android:layout_marginTop="30dp" />
+
+            <CheckBox
+                android:text="  TB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Mother_TB"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Mother_Asthma"
+                android:layout_alignBottom="@+id/Mother_Asthma"
+                android:layout_alignStart="@+id/Mother_HeartAttack" />
+
+            <CheckBox
+                android:text="  Cancer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Mother_Cancer"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Mother_TB"
+                android:layout_alignBottom="@+id/Mother_TB"
+                android:layout_alignStart="@+id/Mother_Stroke" />
+
+            <TextView
+                android:text="Other :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Mother_Other"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_below="@+id/Mother_Asthma"
+                android:layout_alignStart="@+id/Mother_Asthma"
+                android:layout_marginTop="22dp" />
+
+            <EditText
+                android:layout_width="394dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_MotherOther"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_alignBottom="@+id/Mother_Other"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:layout_height="35dp"
+                android:textColor="@android:color/black" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <Button
+            android:text="      Father"
+            android:layout_width="531dp"
+            android:layout_height="66dp"
+            android:id="@+id/button_Father"
+            android:background="#f1656161"
+            android:layout_marginStart="40dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical|start"
+            android:textAllCaps="false"
+            android:layout_marginBottom="2dp" />
+
+        <RelativeLayout
+            android:layout_width="531dp"
+            android:layout_height="191dp"
+            android:layout_marginStart="40dp"
+            android:id="@+id/Father_History"
+            android:background="#42999898"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-2dp">
+
+
+            <CheckBox
+                android:text="  High BP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="31dp"
+                android:id="@+id/Father_BP"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox" />
+
+            <CheckBox
+                android:text="  Heart Attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Father_HeartAttack"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Father_BP"
+                android:layout_alignBottom="@+id/Father_BP"
+                android:layout_toEndOf="@+id/Father_BP"
+                android:layout_marginStart="31dp" />
+
+            <CheckBox
+                android:text="  Stroke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Father_Stroke"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_marginStart="37dp"
+                android:layout_alignBaseline="@+id/Father_HeartAttack"
+                android:layout_alignBottom="@+id/Father_HeartAttack"
+                android:layout_toEndOf="@+id/Father_HeartAttack" />
+
+            <CheckBox
+                android:text="  Diabetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Father_Diabetes"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Father_Stroke"
+                android:layout_alignBottom="@+id/Father_Stroke"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp" />
+
+            <CheckBox
+                android:text="  Asthma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Father_Asthma"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_below="@+id/Father_BP"
+                android:layout_alignStart="@+id/Father_BP"
+                android:layout_marginTop="30dp" />
+
+            <CheckBox
+                android:text="  TB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Father_TB"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Father_Asthma"
+                android:layout_alignBottom="@+id/Father_Asthma"
+                android:layout_alignStart="@+id/Father_HeartAttack" />
+
+            <CheckBox
+                android:text="  Cancer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Father_Cancer"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Father_TB"
+                android:layout_alignBottom="@+id/Father_TB"
+                android:layout_alignStart="@+id/Father_Stroke" />
+
+            <TextView
+                android:text="Other :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Father_Other"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_below="@+id/Father_Asthma"
+                android:layout_alignStart="@+id/Father_Asthma"
+                android:layout_marginTop="22dp" />
+
+            <EditText
+                android:layout_width="394dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_FatherOther"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_alignBottom="@+id/Father_Other"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:layout_height="35dp"
+                android:textColor="@android:color/black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <Button
+            android:text="      Brother"
+            android:layout_width="531dp"
+            android:layout_height="66dp"
+            android:id="@+id/button_Brother"
+            android:background="#f1656161"
+            android:layout_marginStart="40dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical|start"
+            android:textAllCaps="false"
+            android:layout_marginBottom="2dp" />
+
+        <RelativeLayout
+            android:layout_width="531dp"
+            android:layout_height="191dp"
+            android:layout_marginStart="40dp"
+            android:id="@+id/Brother_History"
+            android:background="#42999898"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-2dp">
+
+
+            <CheckBox
+                android:text="  High BP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="31dp"
+                android:id="@+id/Brother_BP"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox" />
+
+            <CheckBox
+                android:text="  Heart Attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Brother_HeartAttack"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Brother_BP"
+                android:layout_alignBottom="@+id/Brother_BP"
+                android:layout_toEndOf="@+id/Brother_BP"
+                android:layout_marginStart="31dp" />
+
+            <CheckBox
+                android:text="  Stroke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Brother_Stroke"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_marginStart="37dp"
+                android:layout_alignBaseline="@+id/Brother_HeartAttack"
+                android:layout_alignBottom="@+id/Brother_HeartAttack"
+                android:layout_toEndOf="@+id/Brother_HeartAttack" />
+
+            <CheckBox
+                android:text="  Diabetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Brother_Diabetes"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Brother_Stroke"
+                android:layout_alignBottom="@+id/Brother_Stroke"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp" />
+
+            <CheckBox
+                android:text="  Asthma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Brother_Asthma"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_below="@+id/Brother_BP"
+                android:layout_alignStart="@+id/Brother_BP"
+                android:layout_marginTop="30dp" />
+
+            <CheckBox
+                android:text="  TB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Brother_TB"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Brother_Asthma"
+                android:layout_alignBottom="@+id/Brother_Asthma"
+                android:layout_alignStart="@+id/Brother_HeartAttack" />
+
+            <CheckBox
+                android:text="  Cancer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Brother_Cancer"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Brother_TB"
+                android:layout_alignBottom="@+id/Brother_TB"
+                android:layout_alignStart="@+id/Brother_Stroke" />
+
+            <TextView
+                android:text="Other :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Brother_Other"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_below="@+id/Brother_Asthma"
+                android:layout_alignStart="@+id/Brother_Asthma"
+                android:layout_marginTop="22dp" />
+
+            <EditText
+                android:layout_width="394dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_BrotherOther"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_alignBottom="@+id/Brother_Other"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:layout_height="35dp"
+                android:textColor="@android:color/black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <Button
+            android:text="      Sister"
+            android:layout_width="531dp"
+            android:layout_height="66dp"
+            android:id="@+id/button_Sister"
+            android:background="#f1656161"
+            android:layout_marginStart="40dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical|start"
+            android:textAllCaps="false"
+            android:layout_marginBottom="2dp" />
+
+        <RelativeLayout
+            android:layout_width="531dp"
+            android:layout_height="191dp"
+            android:layout_marginStart="40dp"
+            android:id="@+id/Sister_History"
+            android:background="#42999898"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-2dp">
+
+
+            <CheckBox
+                android:text="  High BP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="31dp"
+                android:id="@+id/Sister_BP"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox" />
+
+            <CheckBox
+                android:text="  Heart Attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Sister_HeartAttack"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Sister_BP"
+                android:layout_alignBottom="@+id/Sister_BP"
+                android:layout_toEndOf="@+id/Sister_BP"
+                android:layout_marginStart="31dp" />
+
+            <CheckBox
+                android:text="  Stroke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Sister_Stroke"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_marginStart="37dp"
+                android:layout_alignBaseline="@+id/Sister_HeartAttack"
+                android:layout_alignBottom="@+id/Sister_HeartAttack"
+                android:layout_toEndOf="@+id/Sister_HeartAttack" />
+
+            <CheckBox
+                android:text="  Diabetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Sister_Diabetes"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Sister_Stroke"
+                android:layout_alignBottom="@+id/Sister_Stroke"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp" />
+
+            <CheckBox
+                android:text="  Asthma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Sister_Asthma"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_below="@+id/Sister_BP"
+                android:layout_alignStart="@+id/Sister_BP"
+                android:layout_marginTop="30dp" />
+
+            <CheckBox
+                android:text="  TB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Sister_TB"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Sister_Asthma"
+                android:layout_alignBottom="@+id/Sister_Asthma"
+                android:layout_alignStart="@+id/Sister_HeartAttack" />
+
+            <CheckBox
+                android:text="  Cancer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Sister_Cancer"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Sister_TB"
+                android:layout_alignBottom="@+id/Sister_TB"
+                android:layout_alignStart="@+id/Sister_Stroke" />
+
+            <TextView
+                android:text="Other :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Sister_Other"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_below="@+id/Sister_Asthma"
+                android:layout_alignStart="@+id/Sister_Asthma"
+                android:layout_marginTop="22dp" />
+
+            <EditText
+                android:layout_width="394dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_SisterOther"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_alignBottom="@+id/Sister_Other"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:layout_height="35dp"
+                android:textColor="@android:color/black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <Button
+            android:text="      Other"
+            android:layout_width="531dp"
+            android:layout_height="66dp"
+            android:id="@+id/button_Other"
+            android:background="#f1656161"
+            android:layout_marginStart="40dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical|start"
+            android:textAllCaps="false"
+            android:layout_marginBottom="2dp" />
+
+        <RelativeLayout
+            android:layout_width="531dp"
+            android:layout_height="242dp"
+            android:layout_marginStart="40dp"
+            android:id="@+id/Other_History"
+            android:background="#42999898"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-2dp">
+
+
+            <CheckBox
+                android:text="  High BP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="31dp"
+                android:id="@+id/Other_BP"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox" />
+
+            <CheckBox
+                android:text="  Heart Attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Other_HeartAttack"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Other_BP"
+                android:layout_alignBottom="@+id/Other_BP"
+                android:layout_toEndOf="@+id/Other_BP"
+                android:layout_marginStart="31dp" />
+
+            <CheckBox
+                android:text="  Stroke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Other_Stroke"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_marginStart="37dp"
+                android:layout_alignBaseline="@+id/Other_HeartAttack"
+                android:layout_alignBottom="@+id/Other_HeartAttack"
+                android:layout_toEndOf="@+id/Other_HeartAttack" />
+
+            <CheckBox
+                android:text="  Diabetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Other_Diabetes"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Other_Stroke"
+                android:layout_alignBottom="@+id/Other_Stroke"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp" />
+
+            <CheckBox
+                android:text="  Asthma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Other_Asthma"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_below="@+id/Other_BP"
+                android:layout_alignStart="@+id/Other_BP"
+                android:layout_marginTop="30dp" />
+
+            <CheckBox
+                android:text="  TB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Other_TB"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Other_Asthma"
+                android:layout_alignBottom="@+id/Other_Asthma"
+                android:layout_alignStart="@+id/Other_HeartAttack" />
+
+            <CheckBox
+                android:text="  Cancer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Other_Cancer"
+                android:textColor="@android:color/black"
+                android:button="@drawable/mycheckbox"
+                android:layout_alignBaseline="@+id/Other_TB"
+                android:layout_alignBottom="@+id/Other_TB"
+                android:layout_alignStart="@+id/Other_Stroke" />
+
+            <TextView
+            android:text="Other :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Other_Other"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_below="@+id/Other_Asthma"
+            android:layout_alignStart="@+id/Other_Asthma"
+            android:layout_marginTop="22dp" />
+
+            <EditText
+                android:layout_width="394dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_OtherOther"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_alignBottom="@+id/Other_Other"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:layout_height="35dp" />
+
+            <TextView
+                android:text="Relation :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Other_Relation"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_below="@+id/Other_Other"
+                android:layout_alignStart="@+id/Other_Other"
+                android:layout_marginTop="22dp" />
+
+            <EditText
+                android:layout_width="394dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_OtherRelation"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:layout_alignBottom="@+id/Other_Relation"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:layout_height="35dp"
+                android:textColor="@android:color/black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:text="NEXT"
+        android:layout_width="180dp"
+        android:id="@+id/Next_Button"
+        android:elevation="1dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="55dp" />
+
+    </LinearLayout>
+</ScrollView>

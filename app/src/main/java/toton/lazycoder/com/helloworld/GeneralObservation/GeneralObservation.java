@@ -17,6 +17,7 @@ import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -33,12 +34,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -55,12 +59,13 @@ import toton.lazycoder.com.helloworld.Diagnosis.Communicator;
 import toton.lazycoder.com.helloworld.Diagnosis.NothingSelectedSpinnerAdapter;
 import toton.lazycoder.com.helloworld.ObservationAndExamination;
 import toton.lazycoder.com.helloworld.R;
+import toton.lazycoder.com.helloworld.Utility.Globals;
 import toton.lazycoder.com.helloworld.Utility.SpinnerUtility;
 
 
 
 
-public class GeneralObservation extends Fragment implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+public class GeneralObservation extends Fragment implements View.OnClickListener {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -68,26 +73,36 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
     private String mParam1;
     private String mParam2;
 
-    private static final int CAMERA_REQUEST = 1;
     String mCurrentPhotoPath;
 
     JSONObject info;
+    JSONObject images;
+    JSONArray PrevPres;
+    JSONArray XRay;
+    JSONArray USG;
+    JSONArray LabReport;
+    JSONArray Others;
 
     String DocumentWhich;
 
-    TextView BMI;
+    EditText BMI;
     EditText Weight;
     EditText Height;
     EditText Pulse;
-    EditText BP;
+    EditText BPL;
+    EditText BPH;
     EditText Temperature;
-    EditText PastHistory;
+    EditText SPO2;
 
     float BMICalc;
     float WeightCalc;
     float HeightCalc;
     private static DecimalFormat BMIshow = new DecimalFormat(".##");
-    static final int REQUEST_TAKE_PHOTO = 1;
+    static final int PrevPresCode=1;
+    static final int XRayCode=2;
+    static final int USGCode=3;
+    static final int LabRepCode=4;
+    static final int OtherCode=5;
 
     LinearLayout myScroll;
 
@@ -103,6 +118,12 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
     int position;
 
     int imageCount;
+    int XRayCount;
+    int PrevPresCount;
+    int USGCount;
+    int LabReportCount;
+    int OtherCount;
+
     String imageTempName;
     String[] imageFor;
 
@@ -128,6 +149,12 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
         }
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         info = new JSONObject();
+        images = new JSONObject();
+        PrevPres = new JSONArray();
+        XRay = new JSONArray();
+        USG = new JSONArray();
+        LabReport = new JSONArray();
+        Others = new JSONArray();
     }
 
     @Override
@@ -146,20 +173,23 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
         myScroll=(LinearLayout)view.findViewById(R.id.myScroll);
 
         imageCount=0;
-        BMI = (TextView) view.findViewById(R.id.textView_BMI);
+        PrevPresCount=0;
+        XRayCount=0;
+        USGCount=0;
+        LabReportCount=0;
+        OtherCount=0;
+
+        BMI = (EditText) view.findViewById(R.id.editText_BMI);
         Weight = (EditText) view.findViewById(R.id.editText_Weight);
         Height = (EditText) view.findViewById(R.id.editText_Height);
         Pulse = (EditText) view.findViewById(R.id.editText_Pulse);
-        BP = (EditText) view.findViewById(R.id.editText_BP);
+        BPL = (EditText) view.findViewById(R.id.editText_BP1);
+        BPH = (EditText) view.findViewById(R.id.editText_BP2);
         Temperature = (EditText) view.findViewById(R.id.editText_Temperature);
-        PastHistory = (EditText) view.findViewById(R.id.editText_PastMedicalHistory);
+        SPO2 = (EditText) view.findViewById(R.id.editText_SPO2);
 
         Weight.addTextChangedListener(inputTextWatcher);
         Height.addTextChangedListener(inputTextWatcher);
-
-        /*documentPicList = (ListView) view.findViewById(R.id.document_pic_list);
-        documentPicsListAdapter = new DocumentPicsListAdapter(getActivity(), R.drawable.red_cross, documents);
-        documentPicList.setAdapter(documentPicsListAdapter);*/
 
         listView = (ListView) view.findViewById(R.id.document_pic_list);
         getSets = new ArrayList<GetSet>();
@@ -192,77 +222,64 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
                     info.put("Weight",Weight.getText().toString());
                     info.put("BMI",BMI.getText().toString());
                     info.put("Pulse",Pulse.getText().toString());
-                    info.put("BP",BP.getText().toString());
+                    info.put("BP",BPL.getText().toString()+"-"+BPH.getText().toString());
                     info.put("Temperature",Temperature.getText().toString());
-                    info.put("Past Medical History",PastHistory.getText().toString());
+                    info.put("SPO2", SPO2.getText().toString());
+
+                    if(PrevPres.length()!=0)
+                        images.put("Previous Prescription", PrevPres);
+
+                    if(XRay.length()!=0)
+                        images.put("XRay",XRay);
+
+                    if(USG.length()!=0)
+                        images.put("USG",USG);
+
+                    if(LabReport.length()!=0)
+                        images.put("Lab Report",LabReport);
+
+                    if(Others.length()!=0)
+                        images.put("Others",Others);
 
                 }catch(Exception e)
                 {
                     e.printStackTrace();
                 }
-
+                Globals.DocumentImages=images;
                 ObservationAndExamination activity = (ObservationAndExamination) getActivity();
-                activity.communicate(Communicator.Response.CONTINUE, info);
+                activity.communicate(Communicator.Response.CONTINUE, info, 0);
                 break;
 
             case R.id.buttonPrevPres:
-                dispatchTakePictureIntent("Previous Presciption_");
+                dispatchTakePictureIntent("Previous Presciption_", PrevPresCode, PrevPresCount);
 
                 break;
             case R.id.buttonXray:
-                dispatchTakePictureIntent("Previous Xray_");
+                dispatchTakePictureIntent("Previous XRay_", XRayCode, XRayCount);
 
                 break;
             case R.id.buttonUSG:
-                dispatchTakePictureIntent("Previous USG_");
+                dispatchTakePictureIntent("Previous USG_", USGCode, USGCount);
 
                 break;
             case R.id.buttonLabReport:
-                dispatchTakePictureIntent("Previous Lab Reports_");
+                dispatchTakePictureIntent("Previous Lab Reports_", LabRepCode, LabReportCount);
 
                 break;
             case R.id.buttonOthers:
-                dispatchTakePictureIntent("Others_");
+                dispatchTakePictureIntent("Others_", OtherCode, OtherCount);
 
                 break;
         }
 
     }
 
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        if (!(position == 0)) {
-            String item = parent.getItemAtPosition(position).toString();
-            int i=0;
-            captureImage(i++,"newtest"+i+".jpg");
-            //dispatchTakePictureIntent();
-        }
-    }
-
-    public void onNothingSelected(AdapterView<?> arg0) {
-        // TODO Auto-generated method stub
-    }
-
-    public void captureImage(int pos, String imageName) {
-        position = pos;
-        imageTempName = imageName;
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intent, REQUEST_TAKE_PHOTO);
-    }
 
     private void onCaptureImageResult(Intent data) {
         final int THUMBSIZE = 64;
         String photopath="/storage/sdcard0/Android/Doctor/"+imageTempName;
-        Bitmap imageBitmap = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(photopath),
-                THUMBSIZE, THUMBSIZE);
-
-        /*Bundle extras = data.getExtras();
-        Bitmap imageBitmap = (Bitmap) extras.get("data");
-
-
-        // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
-        Uri tempUri = getImageUri(getActivity().getApplicationContext(), imageBitmap, imageTempName);
-        String picturePath = getRealPathFromURI(tempUri);*/
+        Bitmap imageBitmap = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(photopath), THUMBSIZE, THUMBSIZE);
 
         GetSet inflate = new GetSet();
         // Global Values
@@ -280,36 +297,62 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_TAKE_PHOTO && resultCode == Activity.RESULT_OK) {
+        if (requestCode == PrevPresCode && resultCode == Activity.RESULT_OK) {
 
             onCaptureImageResult(data);
-            //documents.add(mCurrentPhotoPath);
-            //documentPicsListAdapter.notifyDataSetChanged();
-            //imageCount++;
+            try {
+                PrevPres.put(EncodeImage("/storage/sdcard0/Android/Doctor/" + imageTempName));
+            }catch (IOException e)
+            {
+                e.printStackTrace();;
+            }
+            PrevPresCount++;
         }
-    }
-
-    public Uri getImageUri(Context inContext, Bitmap inImage, String imageName) {
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        inImage.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
-        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, imageName, null);
-        return Uri.parse(path);
-    }
-
-    public String getRealPathFromURI(Uri uri) {
-        Cursor cursor = getActivity().getContentResolver().query(uri, null, null, null, null);
-        cursor.moveToFirst();
-        int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
-        return cursor.getString(idx);
-    }
-
-    public Bitmap convertSrcToBitmap(String imageSrc) {
-        Bitmap myBitmap = null;
-        File imgFile = new File(imageSrc);
-        if (imgFile.exists()) {
-            myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+        else if (requestCode == XRayCode && resultCode == Activity.RESULT_OK)
+        {
+            onCaptureImageResult(data);
+            try {
+                XRay.put(EncodeImage("/storage/sdcard0/Android/Doctor/" + imageTempName));
+            }catch (IOException e)
+            {
+                e.printStackTrace();;
+            }
+            XRayCount++;
         }
-        return myBitmap;
+        else if (requestCode == USGCode && resultCode == Activity.RESULT_OK)
+        {
+            onCaptureImageResult(data);
+            try {
+                USG.put(EncodeImage("/storage/sdcard0/Android/Doctor/" + imageTempName));
+            }catch (IOException e)
+            {
+                e.printStackTrace();;
+            }
+            USGCount++;
+        }
+        else if (requestCode == LabRepCode && resultCode == Activity.RESULT_OK)
+        {
+
+            onCaptureImageResult(data);
+            try {
+                LabReport.put(EncodeImage("/storage/sdcard0/Android/Doctor/" + imageTempName));
+            }catch (IOException e)
+            {
+                e.printStackTrace();;
+            }
+            LabReportCount++;
+        }
+        else if (requestCode == OtherCode && resultCode == Activity.RESULT_OK)
+        {
+            onCaptureImageResult(data);
+            try {
+                Others.put(EncodeImage("/storage/sdcard0/Android/Doctor/" + imageTempName));
+            }catch (IOException e)
+            {
+                e.printStackTrace();;
+            }
+            OtherCount++;
+        }
     }
 
     TextWatcher inputTextWatcher = new TextWatcher() {
@@ -332,10 +375,7 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
 
     };
 
-    private File createImageFile(String imageFileName) throws IOException {
-        // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(new Date());
-        //String imageFileName = "JPEG_" + timeStamp + "_";
+    private File createImageFile(String imageFileName, int respCount) throws IOException {
 
         File myDir = new File(Environment.getExternalStorageDirectory(), "/Android/Doctor");
         if (!myDir.exists()) {
@@ -349,29 +389,19 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
             }
         }
         Toast.makeText(getActivity(), ""+myDir, Toast.LENGTH_SHORT).show();
-        File image= new File(myDir+"/"+imageFileName+(imageCount)+".jpg");
-        imageTempName=imageFileName+(imageCount)+".jpg";
-        /*File image = File.createTempFile(
-            imageFileName+(imageCount++),
-               ".jpg",
-              myDir
-        );*/
+        File image= new File(myDir+"/"+imageFileName+(respCount)+".jpg");
+        imageTempName=imageFileName+(respCount)+".jpg";
 
-
-
-        // Save a file: path for use with ACTION_VIEW intents
-        Toast.makeText(getActivity(), "Passed1", Toast.LENGTH_SHORT).show();
-        mCurrentPhotoPath = "file://" + image.getAbsolutePath();
         return image;
     }
 
-    private void dispatchTakePictureIntent(String imageFileName) {
+    private void dispatchTakePictureIntent(String imageFileName, int respCode, int respCount) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
         if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
             File photoFile = null;
             try {
-                photoFile = createImageFile(imageFileName);
+                photoFile = createImageFile(imageFileName, respCount);
             } catch (IOException ex) {
                 Toast.makeText(getActivity(), "Couldn't create file"+ex, Toast.LENGTH_SHORT).show();
                 ex.printStackTrace();
@@ -392,12 +422,41 @@ public class GeneralObservation extends Fragment implements View.OnClickListener
                 }
                 position=imageCount;
 
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+                startActivityForResult(takePictureIntent, respCode);
             }
         }
     }
 
+    public String EncodeImage(String filepath) throws IOException
+    {
+        InputStream inputStream;
+            inputStream = new FileInputStream(filepath);//You can get an inputStream using any IO API
 
+            byte[] bytes;
+            byte[] buffer = new byte[8192];
+            int bytesRead;
+            ByteArrayOutputStream output = new ByteArrayOutputStream();
+            try {
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    output.write(buffer, 0, bytesRead);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
+            bytes = output.toByteArray();
+            String encodedString = Base64.encodeToString(bytes, Base64.DEFAULT);
+            return encodedString;
+    }
+    public String EncodeImageComp(String filepath) throws IOException
+    {
+        Bitmap bm = BitmapFactory.decodeFile(filepath);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bm.compress(Bitmap.CompressFormat.JPEG, 100, baos); //bm is the bitmap object
+        byte[] byteArrayImage = baos.toByteArray();
+
+        String encodedImage = Base64.encodeToString(byteArrayImage, Base64.DEFAULT);
+        return encodedImage;
+    }
 }
 

@@ -1,0 +1,258 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="toton.lazycoder.com.helloworld.GeneralObservation.MedicalHistory"
+    android:background="@android:color/background_light"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:weightSum="1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.77">
+
+        <TextView
+            android:text="Patient's Medical History :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/textView10"
+            android:fontFamily="serif"
+            android:textSize="24sp" />
+
+
+        <CheckBox
+        android:text="               High Blood Pressure"
+        android:layout_height="40dp"
+        android:id="@+id/checkBox_BloodPressure"
+        android:layout_marginLeft="40dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/highlight"
+        android:textSize="18sp"
+            android:checked="false"
+        android:layout_marginTop="20dp"
+        android:layout_width="340dp"
+            app:buttonTint="@android:color/background_dark"
+            style="@android:style/Widget.Holo.Light.CompoundButton.CheckBox" />
+
+        <CheckBox
+        android:text="               Heart Attack"
+        android:layout_width="340dp"
+        android:id="@+id/checkBox_HeartAttack"
+        android:layout_marginLeft="40dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/highlight"
+        android:textSize="18sp"
+            android:checked="false"
+        android:layout_marginTop="5dp"
+        android:layout_height="40dp"
+            style="@android:style/Widget.Holo.Light.CompoundButton.CheckBox"
+            app:buttonTint="@android:color/black" />
+
+        <CheckBox
+            android:text="               Stroke"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:id="@+id/checkBox_Stroke"
+            android:layout_marginLeft="40dp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/highlight"
+            android:textSize="18sp"
+            android:checked="false"
+            android:layout_marginTop="5dp"
+            style="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox"
+            app:buttonTint="@android:color/black" />
+
+        <CheckBox
+        android:text="               Diabetes"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:id="@+id/checkBox_Diabetes"
+        android:layout_marginLeft="40dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/highlight"
+        android:textSize="18sp"
+            android:checked="false"
+        android:layout_marginTop="5dp"
+            style="@android:style/Widget.Holo.Light.CompoundButton.CheckBox"
+            app:buttonTint="@android:color/black" />
+
+    <CheckBox
+        android:text="               Asthma"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:id="@+id/checkBox_Asthma"
+        android:layout_marginLeft="40dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/highlight"
+        android:textSize="18sp"
+        android:checked="false"
+        android:layout_marginTop="5dp"
+        style="@android:style/Widget.Holo.Light.CompoundButton.CheckBox"
+        app:buttonTint="@android:color/black" />
+
+        <CheckBox
+            android:text="               TB"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:id="@+id/checkBox_TB"
+            android:layout_marginLeft="40dp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/highlight"
+            android:textSize="18sp"
+            android:checked="false"
+            android:layout_marginTop="5dp"
+            app:buttonTint="@android:color/black" />
+
+        <CheckBox
+        android:text="               Cancer"
+        android:layout_height="40dp"
+        android:id="@+id/checkBox_Cancer"
+        android:layout_marginLeft="40dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/highlight"
+        android:textSize="18sp"
+            android:checked="false"
+        android:layout_marginTop="5dp"
+        android:layout_width="340dp"
+            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+            app:buttonTint="@android:color/black" />
+
+        <CheckBox
+            android:text="               Operation"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:id="@+id/checkBox_Operation"
+            android:layout_marginLeft="40dp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/highlight"
+            android:textSize="18sp"
+            android:checked="false"
+            android:layout_marginTop="5dp"
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            app:buttonTint="@android:color/black" />
+
+        <CheckBox
+            android:text="               Accident"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:id="@+id/checkBox_Accident"
+            android:layout_marginLeft="40dp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/highlight"
+            android:textSize="18sp"
+            android:checked="false"
+            android:layout_marginTop="5dp"
+            app:buttonTint="@android:color/black"
+            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox" />
+
+        <TextView
+            android:text="      Other :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:layout_width="394dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_marginLeft="45dp"
+            android:id="@+id/editText_HistoryOther"
+            android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.37"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="599dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.86"
+            android:weightSum="1">
+
+        <TextView
+            android:text="Habits :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="serif"
+            android:textSize="24sp" />
+
+        <CheckBox
+            android:text="               Smoking"
+            android:layout_height="40dp"
+            android:id="@+id/checkBox_Smoking"
+            android:layout_marginLeft="40dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:checked="false"
+            android:layout_marginTop="20dp"
+            android:layout_width="340dp"
+            style="@android:style/Widget.Holo.Light.CompoundButton.CheckBox"
+            app:buttonTint="@android:color/black"
+            android:background="@drawable/highlight" />
+
+            <CheckBox
+                android:text="               Tobacco Chewing"
+                android:layout_height="40dp"
+                android:id="@+id/checkBox_Tobacco"
+                android:layout_marginLeft="40dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:checked="false"
+                android:layout_marginTop="20dp"
+                android:layout_width="340dp"
+                style="@android:style/Widget.Holo.Light.CompoundButton.CheckBox"
+                app:buttonTint="@android:color/black"
+                android:background="@drawable/highlight" />
+
+            <CheckBox
+                android:text="               Alcohol"
+                android:layout_height="40dp"
+                android:id="@+id/checkBox_Alcohol"
+                android:layout_marginLeft="40dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:checked="false"
+                android:layout_marginTop="20dp"
+                android:layout_width="340dp"
+                style="@android:style/Widget.Holo.Light.CompoundButton.CheckBox"
+                android:layout_weight="0.04"
+                app:buttonTint="@android:color/black"
+                android:background="@drawable/highlight" />
+
+        </LinearLayout>
+
+        <Button
+            android:text="Next"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Next"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.03" />
+
+    </LinearLayout>
+</LinearLayout>

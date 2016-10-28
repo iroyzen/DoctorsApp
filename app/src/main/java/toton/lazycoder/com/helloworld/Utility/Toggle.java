@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import toton.lazycoder.com.helloworld.R;
 
@@ -14,6 +15,18 @@ import toton.lazycoder.com.helloworld.R;
 public class Toggle {
 
     public static void toggle_contents(Context context, LinearLayout contents)
+    {
+        if(contents.isShown()){
+            slide_up(context, contents);
+            contents.setVisibility(View.GONE);
+        }
+        else{
+            contents.setVisibility(View.VISIBLE);
+            slide_down(context, contents);
+        }
+    }
+
+    public static void toggle_relative_contents(Context context, RelativeLayout contents)
     {
         if(contents.isShown()){
             slide_up(context, contents);

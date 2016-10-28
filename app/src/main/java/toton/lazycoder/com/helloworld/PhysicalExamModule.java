@@ -40,6 +40,7 @@ import toton.lazycoder.com.helloworld.PhysicalExam.RectalAreaExam;
 import toton.lazycoder.com.helloworld.PhysicalExam.ScrotalExam;
 import toton.lazycoder.com.helloworld.PhysicalExam.Test;
 import toton.lazycoder.com.helloworld.R;
+import toton.lazycoder.com.helloworld.Utility.Globals;
 
 public class PhysicalExamModule extends AppCompatActivity implements AdapterView.OnItemClickListener, Communicator, View.OnClickListener {
 
@@ -63,6 +64,7 @@ public class PhysicalExamModule extends AppCompatActivity implements AdapterView
         try {
             PhyExamInfo = new JSONArray(getIntent().getStringExtra("ExamValue"));
             Patient = new JSONObject(getIntent().getStringExtra("Patient"));
+            //Patient= Globals.PatientData;
             Section3 = new JSONObject(Patient.get("Section 3").toString());
 
         } catch (Exception e) {
@@ -110,6 +112,7 @@ public class PhysicalExamModule extends AppCompatActivity implements AdapterView
             Intent i = new Intent(this,ShowComplaints.class);
             if(Patient!=null) {
                 i.putExtra("Patient", Patient.toString());
+                //Globals.PatientData=Patient;
             }
             startActivity(i);
         }

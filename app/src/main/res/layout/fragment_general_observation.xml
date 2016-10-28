@@ -1,391 +1,432 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="toton.lazycoder.com.helloworld.GeneralObservation.GeneralObservation"
-    android:background="@drawable/back10">
+    android:background="@drawable/back10"
+    android:orientation="vertical">
 
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView17"
-        >
-        <LinearLayout
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.9"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="      Vitals :"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="normal|bold" />
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:weightSum="1">
-            <LinearLayout
-                android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:text="Height :"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="58dp"
+                android:layout_marginTop="22dp"
+                android:id="@+id/textView_Height"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:gravity="center_vertical" />
+
+            <EditText
+                android:layout_height="45dp"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:layout_alignTop="@+id/textView_Height"
+                android:layout_alignBottom="@+id/textView_Height"
+                android:layout_toEndOf="@+id/textView_Height"
+                android:layout_marginStart="10dp"
+                android:id="@+id/editText_Height"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="80dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="cm"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Past Medical History:"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="30dp"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                android:layout_toEndOf="@+id/editText_Height"
+                android:id="@+id/textView33"
+                android:textColor="@android:color/black"
+                android:layout_alignTop="@+id/editText_Height"
+                android:layout_alignBottom="@+id/textView_SPO2"
+                android:gravity="center_vertical" />
 
-                <EditText
-                    android:layout_width="700dp"
-                    android:layout_height="150dp"
-                    android:textColor="#000000"
-                    android:layout_marginStart="30dp"
-                    android:id="@+id/editText_PastMedicalHistory"
-                    android:background="@drawable/background_new"
-                    android:gravity="top|left" />
-            </LinearLayout>
+            <TextView
+                android:text="Weight :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="123dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:id="@+id/textView_Weight"
+                android:layout_alignBottom="@+id/editText_Height"
+                android:layout_toEndOf="@+id/textView33"
+                android:layout_alignTop="@+id/editText_Height" />
 
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:layout_alignTop="@+id/textView_Height"
+                android:layout_alignBottom="@+id/textView_Height"
+                android:layout_toEndOf="@+id/textView_Weight"
+                android:background="@android:drawable/editbox_background_normal"
+                android:textColor="@android:color/black"
+                android:id="@+id/editText_Weight" />
+
+            <TextView
+                android:text="kg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView_Weight"
+                android:layout_toEndOf="@+id/editText_Weight"
+                android:id="@+id/textView35"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:layout_alignBottom="@+id/editText_Weight" />
+
+            <TextView
+                android:text="BMI :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/editText_Height"
+                android:layout_alignBottom="@+id/editText_Height"
+                android:layout_toEndOf="@+id/textView35"
+                android:layout_marginStart="125dp"
+                android:id="@+id/textView_BMI"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editText_BP2"
+                android:background="@android:drawable/editbox_background_normal"
+                android:textColor="@android:color/black"
+                android:layout_height="45dp"
+                android:layout_width="70dp"
+                android:layout_toEndOf="@+id/editText_Height"
+                android:layout_alignTop="@+id/textView_BP"
+                android:layout_alignBottom="@+id/textView_BP" />
+
+            <TextView
+                android:text="Pulse :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_BMI"
+                android:id="@+id/textView42"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_alignTop="@+id/textView_BP"
+                android:layout_alignBottom="@+id/textView_BP"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:text="SPO2 :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="114dp"
+                android:id="@+id/textView_SPO2"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:layout_alignBottom="@+id/editText_BMI"
+                android:layout_toEndOf="@+id/editText_BMI"
+                android:layout_alignTop="@+id/editText_BMI" />
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editText_Pulse"
+                android:background="@android:drawable/editbox_background_normal"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@+id/textView42"
+                android:layout_alignTop="@+id/textView_BP"
+                android:layout_alignBottom="@+id/textView_BP" />
+
+            <TextView
+                android:text="°C"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/textView41"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_toStartOf="@+id/textView_BMI"
+                android:layout_alignTop="@+id/textView_BP"
+                android:layout_alignBottom="@+id/textView_BP"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:text="/"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/textView39"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_alignTop="@+id/textView_BP"
+                android:layout_alignBottom="@+id/textView_BP"
+                android:layout_toEndOf="@+id/editText_BP1"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:text="Temp  :"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/textView40"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_toStartOf="@+id/editText_Weight"
+                android:layout_alignTop="@+id/textView_BP"
+                android:layout_alignBottom="@+id/textView_BP"
+                android:gravity="center_vertical" />
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editText_Temperature"
+                android:background="@android:drawable/editbox_background_normal"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@+id/textView40"
+                android:layout_alignTop="@+id/editText_BP2"
+                android:layout_alignBottom="@+id/editText_BP2" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editText_BP1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:textColor="@android:color/black"
+                android:layout_height="45dp"
+                android:layout_width="70dp"
+                android:layout_alignTop="@+id/textView_BP"
+                android:layout_alignBottom="@+id/textView_BP"
+                android:layout_alignStart="@+id/editText_Height" />
+
+            <TextView
+                android:text="BP :"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/textView_BP"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="95dp"
+                android:gravity="center_vertical" />
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editText_BMI"
+                android:background="@android:drawable/editbox_background_normal"
+                android:textColor="@android:color/black"
+                android:layout_alignTop="@+id/textView_BMI"
+                android:layout_alignBottom="@+id/textView_BMI"
+                android:layout_toEndOf="@+id/textView_BMI" />
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editText_SPO2"
+                android:background="@android:drawable/editbox_background_normal"
+                android:textColor="@android:color/black"
+                android:layout_alignTop="@+id/textView_Height"
+                android:layout_alignBottom="@+id/textView_Height"
+                android:layout_toEndOf="@+id/textView_SPO2" />
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Any previous documents?"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_weight="5.63">
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="25dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Height:  "
-                    android:layout_row="0"
-                    android:layout_column="0"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:layout_width="140dp"
-                    android:layout_height="50dp"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText_Height"
-                    android:layout_row="0"
-                    android:layout_column="1"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:background="@drawable/background_new" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="cm  "
-                    android:layout_row="0"
-                    android:layout_column="2"
-                    android:textColor="#000000"
-                    android:textSize="25dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Weight:   "
-                    android:layout_row="0"
-                    android:layout_column="2"
-                    android:textStyle="bold"
-                    android:textSize="25dp"
-                    android:textColor="#000000"
-                    android:layout_marginLeft="200dp" />
-                <EditText
-                    android:layout_width="140dp"
-                    android:layout_height="50dp"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText_Weight"
-                    android:layout_row="0"
-                    android:layout_column="3"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:background="@drawable/background_new" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" kg  "
-                    android:layout_row="0"
-                    android:layout_column="4"
-                    android:textColor="#000000"
-                    android:textSize="25dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="BMI:   "
-                    android:layout_row="1"
-                    android:layout_column="0"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="30dp" />
-
-                <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/textView_BMI"
-                    android:layout_row="1"
-                    android:layout_column="1"
-                    android:textColor="#000000"
-                    android:textSize="25sp"
-                    android:background="@drawable/background_new"
-                    android:layout_marginTop="30dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pulse:   "
-                    android:layout_row="1"
-                    android:layout_column="2"
-                    android:textStyle="bold"
-                    android:textSize="25dp"
-                    android:textColor="#000000"
-                    android:layout_marginLeft="200dp"
-                    android:layout_marginTop="30dp" />
-                <EditText
-                    android:layout_width="140dp"
-                    android:layout_height="50dp"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText_Pulse"
-                    android:layout_row="1"
-                    android:layout_column="3"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:background="@drawable/background_new"
-                    android:layout_marginTop="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" /min  "
-                    android:layout_row="1"
-                    android:layout_column="4"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:layout_marginTop="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="BP:   "
-                    android:layout_row="2"
-                    android:layout_column="0"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="30dp" />
-
-                <EditText
-                    android:layout_width="150dp"
-                    android:layout_height="50dp"
-                    android:ems="10"
-                    android:id="@+id/editText_BP"
-                    android:layout_row="2"
-                    android:layout_column="1"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:background="@drawable/background_new"
-                    android:layout_marginTop="30dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Temperature:   "
-                    android:layout_row="2"
-                    android:layout_column="2"
-                    android:textStyle="bold"
-                    android:textSize="25dp"
-                    android:textColor="#000000"
-                    android:layout_marginLeft="200dp"
-                    android:layout_marginTop="30dp" />
-                <EditText
-                    android:layout_width="140dp"
-                    android:layout_height="50dp"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText_Temperature"
-                    android:layout_row="2"
-                    android:layout_column="3"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:background="@drawable/background_new"
-                    android:layout_marginTop="30dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" °C  "
-                    android:layout_row="2"
-                    android:layout_column="4"
-                    android:textColor="#000000"
-                    android:textSize="25dp"
-                    android:layout_marginTop="30dp"/>
-            </GridLayout>
-
-            <GridLayout
+            <LinearLayout
+                android:layout_width="782dp"
+                android:layout_height="300dp"
+                android:layout_column="1"
+                android:layout_row="1"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:id="@+id/myScroll">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Pictures :"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Any previous documents?"
-                    android:layout_marginLeft="30dp"
                     android:textColor="#000000"
-                    android:textStyle="bold"
-                    android:textSize="25dp" />
+                    android:layout_marginLeft="50dp" />
 
-                <GridLayout
-                    android:layout_width="450dp"
-                    android:layout_height="wrap_content"
-                    android:layout_column="0"
-                    android:layout_row="1"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/background_new">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Previous Prescription                       "
-                        android:textColor="#000000"
-                        android:layout_marginLeft="30dp"
-                        android:textSize="20dp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Capture"
-                        android:id="@+id/buttonPrevPres" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Previous Xray"
-                        android:layout_row="1"
-                        android:layout_column="0"
-                        android:textColor="#000000"
-                        android:layout_marginLeft="30dp"
-                        android:textSize="20dp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Capture"
-                        android:id="@+id/buttonXray" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Previous USG"
-                        android:layout_row="2"
-                        android:layout_column="0"
-                        android:textColor="#000000"
-                        android:layout_marginLeft="30dp"
-                        android:textSize="20dp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Capture"
-                        android:id="@+id/buttonUSG" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Previous Lab Reports"
-                        android:layout_row="3"
-                        android:layout_column="0"
-                        android:textColor="#000000"
-                        android:layout_marginLeft="30dp"
-                        android:textSize="20dp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Capture"
-                        android:id="@+id/buttonLabReport" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Others"
-                        android:layout_row="4"
-                        android:layout_column="0"
-                        android:textColor="#000000"
-                        android:layout_marginLeft="30dp"
-                        android:textSize="20dp" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Capture"
-                        android:id="@+id/buttonOthers" />
-
-                </GridLayout>
                 <LinearLayout
-                    android:layout_width="782dp"
-                    android:layout_height="300dp"
-                    android:layout_column="1"
-                    android:layout_row="1"
-                    android:orientation="vertical"
-                    android:id="@+id/myScroll">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:weightSum="1">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:text="Pictures :"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                    <ListView
+                        android:id="@+id/document_pic_list"
+                        android:layout_width="650dp"
+                        android:layout_height="248dp"
                         android:textColor="#000000"
-                        android:layout_marginLeft="50dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="20dp"
-                        android:weightSum="1">
-
-                        <ListView
-                            android:id="@+id/document_pic_list"
-                            android:layout_width="650dp"
-                            android:layout_height="wrap_content"
-                            android:textColor="#000000"
-                            android:background="#7b55b10b"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginLeft="30dp"
-                            android:layout_weight="0.11">
-                        </ListView>
-                    </LinearLayout>
-
+                        android:background="#7b55b10b"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="30dp">
+                    </ListView>
                 </LinearLayout>
 
-
-            </GridLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:orientation="horizontal"
-                android:layout_gravity="bottom">
-
-                <Button
-                    android:id="@+id/backButton"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/back_button"
-                    />
-
-                <Button
-                    android:id="@+id/continueButton"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/continue_button"/>
             </LinearLayout>
 
-        </LinearLayout>
-    </ScrollView>
+            <GridLayout
+                android:layout_width="450dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_new">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Previous Prescription                       "
+                    android:textColor="#000000"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20dp" />
 
-</FrameLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capture"
+                    android:id="@+id/buttonPrevPres" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Previous Xray"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capture"
+                    android:id="@+id/buttonXray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Previous USG"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capture"
+                    android:id="@+id/buttonUSG" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Previous Lab Reports"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capture"
+                    android:id="@+id/buttonLabReport" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Others"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capture"
+                    android:id="@+id/buttonOthers" />
+
+            </GridLayout>
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/back_button"
+            />
+
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/continue_button"/>
+    </LinearLayout>
+
+</LinearLayout>

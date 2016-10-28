@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
@@ -17,6 +18,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+
+import toton.lazycoder.com.helloworld.Utility.Globals;
 
 public class ShowComplaints extends Activity {
 
@@ -32,13 +35,19 @@ public class ShowComplaints extends Activity {
 
         try {
             Patient = new JSONObject(getIntent().getStringExtra("Patient"));
-
+            //Patient = Globals.PatientData;
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         if (Complaints.toString().length() != 0) {
             Complaints.setText(Patient.toString());
+        }
+        try {
+            Patient.put("Images", Globals.DocumentImages);
+        }catch(JSONException e)
+        {
+            e.printStackTrace();
         }
 
 
@@ -65,9 +74,6 @@ public class ShowComplaints extends Activity {
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(content);
             bw.close();
-            if (Complaints.toString().length() != 0) {
-                Complaints.setText(Patient.toString());
-            }
         } catch (Exception e) {
             Toast.makeText(this, e + "", Toast.LENGTH_SHORT).show();
         }

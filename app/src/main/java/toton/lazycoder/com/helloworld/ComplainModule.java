@@ -5,13 +5,9 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringDef;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,17 +15,16 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.SharedPreferences;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 
 import toton.lazycoder.com.helloworld.Adapter.AlreadyDiagnosedListAdapter;
 import toton.lazycoder.com.helloworld.Adapter.SelectedNoneSpinnerAdapter;
@@ -76,7 +71,7 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
     AlreadyDiagnosedListAdapter alreadyDiagnosedAdapter;
 
     JSONObject Patient;
-    JSONObject Section3=new JSONObject();;
+    JSONObject Section3=new JSONObject();
     JSONObject Category;
     JSONObject Pain = new JSONObject();
     JSONObject Swelling = new JSONObject();
@@ -105,6 +100,11 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
 
     JSONArray PhyExamInfo;
 
+    JSONObject Section2;
+    JSONObject Section1;
+    TextView Name;
+    TextView RegNo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -115,6 +115,8 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
         Category = new JSONObject();
         try {
             Patient = new JSONObject(getIntent().getStringExtra("Patient"));
+            Section2 = new JSONObject(Patient.get("Section 2").toString());
+            Section1 = new JSONObject(Patient.get("Section 1").toString());
         }
         catch (JSONException e)
         {
@@ -123,6 +125,20 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
 
         Button Finish = (Button)findViewById(R.id.finish);
         Finish.setOnClickListener(this);
+
+        Name = (TextView)findViewById(R.id.Name);
+        RegNo = (TextView)findViewById(R.id.RegNo);
+
+        try {
+            String NameHolder="Name : "+Section2.get("Name").toString();
+            String RegHolder="Patient Id : "+Section1.get("PatientID").toString();
+            Name.setText(NameHolder);
+            RegNo.setText(RegHolder);
+        }catch (JSONException e)
+        {
+            e.printStackTrace();
+        }
+
 
         fragmentManager = getFragmentManager();
 
@@ -368,7 +384,6 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
         }
     }
 
-    @Nullable
     private Fragment instantiateFragmentByTag(String tag){
         if(tag.equals("Headache"))
         {
@@ -393,7 +408,8 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
                 PhyExamInfo.put("Mouth Exam");
             }
             return new TeethPain();
-        }else if(tag.equals("Throat Pain")){
+        }else if(tag.equals("Throat Pain"))
+        {
             if(!AlreadyInList("Neck Exam")) {
                 PhyExamInfo.put("Neck Exam");
             }
@@ -401,13 +417,18 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
                 PhyExamInfo.put("Mouth Exam");
             }
             return new ThroatPain();
-        }else if(tag.equals("Back Pain")){
+        }else if(tag.equals("Back Pain"))
+        {
             if(!AlreadyInList("Back Exam")) {
                 PhyExamInfo.put("Back Exam");
             }
+            if(!AlreadyInList("Leg Exam")) {
+                PhyExamInfo.put("Leg Exam");
+            }
 
             return new BackPain();
-        }else if(tag.equals("Joint Pain")){
+        }else if(tag.equals("Joint Pain"))
+        {
             if(!AlreadyInList("Any location Exam")) {
                 PhyExamInfo.put("Any location Exam");
             }
@@ -415,7 +436,8 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
                 PhyExamInfo.put("Leg Exam");
             }
             return new JointPain();
-        }else if(tag.equals("Chest Pain")){
+        }else if(tag.equals("Chest Pain"))
+        {
             if(!AlreadyInList("Chest Exam")) {
                 PhyExamInfo.put("Chest Exam");
             }
@@ -435,7 +457,11 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
                 PhyExamInfo.put("Scrotal Exam");
             }
             return new ScrotalPain();
-        }else if(tag.equals("Perianal Pain")){
+        }else if(tag.equals("Perianal Pain"))
+        {
+            if(!AlreadyInList("Rectal Area Exam")) {
+                PhyExamInfo.put("Rectal Area Exam");
+            }
             return new PerianalPain();
         }else if(tag.equals("Abdomen Swelling"))
         {
@@ -445,27 +471,59 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
             }
             return new AbdomenSwelling();
 
-        }else if(tag.equals("Throat Swelling")){
+        }else if(tag.equals("Throat Swelling"))
+        {
             if(!AlreadyInList("Mouth Exam")) {
                 PhyExamInfo.put("Mouth Exam");
             }
             return new ThroatSwelling();
-        }else if(tag.equals("Others Swelling")){
+        }else if(tag.equals("Others Swelling"))
+        {
             return new OtherSwelling();
-        }else if(tag.equals("Acidity/Indigestion")){
+        }else if(tag.equals("Acidity/Indigestion"))
+        {
+            if(!AlreadyInList("Abdomen Exam")) {
+                PhyExamInfo.put("Abdomen Exam");
+            }
             return new AcidityIndigestion();
-        }else if(tag.equals("Difficulty in Breathing")){
+        }else if(tag.equals("Difficulty in Breathing"))
+        {
+            if(!AlreadyInList("Face Exam")) {
+                PhyExamInfo.put("Face Exam");
+            }
+            if(!AlreadyInList("Hand Exam")) {
+                PhyExamInfo.put("Hand Exam");
+            }
             if(!AlreadyInList("Chest Exam")) {
                 PhyExamInfo.put("Chest Exam");
             }
             return new DifficultyBreathing();
-        }else if(tag.equals("Diarrhoea")){
+        }else if(tag.equals("Diarrhoea"))
+        {
+            if(!AlreadyInList("Abdomen Exam")) {
+                PhyExamInfo.put("Abdomen Exam");
+            }
             return new Diarrhoea();
-        }else if(tag.equals("Vomiting")){
+        }else if(tag.equals("Vomiting"))
+        {
+            if(!AlreadyInList("Abdomen Exam")) {
+                PhyExamInfo.put("Abdomen Exam");
+            }
             return new Vomiting();
-        }else if(tag.equals("Dizziness")){
+        }else if(tag.equals("Dizziness"))
+        {
+            if(!AlreadyInList("Arm Exam")) {
+                PhyExamInfo.put("Arm Exam");
+            }
+            if(!AlreadyInList("Chest Exam")) {
+                PhyExamInfo.put("Chest Exam");
+            }
             return new Dizziness();
-        }else if(tag.equals("Yellow Urine")){
+        }else if(tag.equals("Yellow Urine"))
+        {
+            if(!AlreadyInList("Abdomen Exam")) {
+                PhyExamInfo.put("Abdomen Exam");
+            }
             return new YellowUrine();
         }else if(tag.equals("Skin Rash")){
             if(!AlreadyInList("Any location Exam")) {
@@ -474,6 +532,9 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
             return new SkinRash();
         }else if(tag.equals("Bleeding with Stool"))
         {
+            if(!AlreadyInList("Rectal Area Exam")) {
+                PhyExamInfo.put("Rectal Area Exam");
+            }
             return new BleedingWithStool();
         }else if(tag.equals("Injury"))
         {
@@ -491,7 +552,15 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
                 PhyExamInfo.put("Chest Exam");
             }
             return new Cough();
-        }else if(tag.equals("Fever")) {
+        }else if(tag.equals("Fever"))
+        {
+            if(!AlreadyInList("Mouth Exam"))
+            {
+                PhyExamInfo.put("Mouth Exam");
+            }
+            if(!AlreadyInList("Chest Exam")) {
+                PhyExamInfo.put("Chest Exam");
+            }
             return new Fever();
         }else if(tag.equals("Boils")) {
             if(!AlreadyInList("Any location Exam")) {
@@ -503,13 +572,26 @@ public class ComplainModule extends AppCompatActivity implements Communicator, V
                 PhyExamInfo.put("Any location Exam");
             }
             return new Ulcer();
-        }else if(tag.equals("Palpitation")) {
+        }else if(tag.equals("Palpitation"))
+        {
+            if(!AlreadyInList("Arm Exam")) {
+                PhyExamInfo.put("Arm Exam");
+            }
             return new Palpitation();
-        }else if(tag.equals("Fainting")) {
+        }else if(tag.equals("Fainting"))
+        {
+            if(!AlreadyInList("Arm Exam")) {
+                PhyExamInfo.put("Arm Exam");
+            }
             return new Fainting();
-        }else if(tag.equals("General Weakness")) {
+        }else if(tag.equals("General Weakness"))
+        {
+            if(!AlreadyInList("Hand Exam")) {
+                PhyExamInfo.put("Hand Exam");
+            }
             return new GeneralWeakness();
-        }else if(tag.equals("Particular Weakness")) {
+        }else if(tag.equals("Particular Weakness"))
+        {
             return new ParticularWeakness();
         }
 

@@ -29,7 +29,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/Name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -41,7 +41,7 @@
                     android:textColor="#000000" />
 
                 <TextView
-                    android:id="@+id/regNo"
+                    android:id="@+id/RegNo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -57,19 +57,18 @@
             <Spinner
                 android:id="@+id/category"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
-                android:background="@drawable/spinner_background" />
+                android:background="@drawable/guava_spinner"
+                android:layout_height="65dp" />
 
             <Spinner
                 android:id="@+id/subcategory"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -78,9 +77,9 @@
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
 
-                android:background="@drawable/spinner_background"
+                android:background="@drawable/guava_spinner"
                 android:tint="#488f05"
-                />
+                android:layout_height="65dp" />
 
             <Button
                 android:id="@+id/finish"

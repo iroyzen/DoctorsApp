@@ -109,7 +109,7 @@
                         android:layout_height="50dp"
                         android:id="@+id/spinner_Distention"
                         android:layout_marginLeft="30dp"
-                        
+
                         android:background="@drawable/spinner_background" />
 
 
@@ -281,7 +281,7 @@
                         android:layout_height="50dp"
                         android:id="@+id/spinner_LumpShape"
                         android:layout_marginLeft="30dp"
-                        
+
                         android:background="@drawable/spinner_background" />
 
                 </LinearLayout>
@@ -300,7 +300,7 @@
                     android:layout_height="50dp"
                     android:id="@+id/spinner_LumpSurface"
                     android:layout_marginLeft="30dp"
-                    
+
                     android:background="@drawable/spinner_background" />
 
             </LinearLayout>
@@ -319,7 +319,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/spinner_LumpFeel"
                 android:layout_marginLeft="30dp"
-                
+
                 android:background="@drawable/spinner_background" />
 
             <TextView
@@ -336,7 +336,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/spinner_LumpPain"
                 android:layout_marginLeft="30dp"
-                
+
                 android:background="@drawable/spinner_background" />
 
             <TextView
@@ -353,7 +353,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/spinner_LumpSkin"
                 android:layout_marginLeft="30dp"
-                
+
                 android:background="@drawable/spinner_background" />
 
             <TextView
@@ -370,7 +370,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/spinner_LumpSwell"
                 android:layout_marginLeft="30dp"
-                
+
                 android:background="@drawable/spinner_background" />
 
             <TextView
@@ -387,7 +387,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/spinner_LumpMove"
                 android:layout_marginLeft="30dp"
-                
+
                 android:background="@drawable/spinner_background" />
 
             <TextView
@@ -404,7 +404,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/spinner_LumpSize"
                 android:layout_marginLeft="30dp"
-                
+
                 android:background="@drawable/spinner_background" />
 
             <TextView
@@ -421,7 +421,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/spinner_LumpLieSize"
                 android:layout_marginLeft="30dp"
-                
+
                 android:background="@drawable/spinner_background" />
 
             <LinearLayout
